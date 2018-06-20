@@ -8,9 +8,6 @@
 
 int main(void)
 {
-	char *s;
-
-	s = "with proper grammar, but the outcome is a piece of art,";
-	printf("%s", *s);
+	puts("Programming is like building a multilingual puzzle");
 	return (0);
 }
