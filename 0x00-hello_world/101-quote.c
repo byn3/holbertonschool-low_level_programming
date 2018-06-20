@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
-* main - prints out a string via puts
+* main - prints out a string using write
 * Description: Program that prints out the string s followed by a new line
 * Return: int 0 when done and no errors
 */
