@@ -11,19 +11,17 @@ int main(void)
 {
 	int x;
 	int y;
-	int a;
-	int b;
 
 	for (x = 48; x < 58; x++)
 	{
-		for (y = 48; y < 58; y++)
+		for (y = x + 1; y < 58; y++)
 		{
-			a = (x * 10 + y);
-			b = (y * 10 + x);
-			if (a > b)
-				putchar(b);
-			else
-				putchar(a);
+			putchar(x);
+			putchar(y);
+			if (x == 56 && y == 57)
+				break;
+			putchar(44);
+			putchar(32);
 		}
 	}
 	putchar(10);
