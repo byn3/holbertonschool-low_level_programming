@@ -1,15 +1,32 @@
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
 #include <stdio.h>
 
 /**
-* main - prints out a string using write
-* Description: Program that prints out the string s followed by a new line
+* main - prints out a random number value
+* Description: Program that uses rand, srand, RAND_MAX, math header
+* and code to output lines of output
 * Return: int 0 when done and no errors
 */
 
 int main(void)
 {
-        write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
-        , 59);
-        return (1);
-}
+	int n;
 
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+	{
+		printf("%d is positive\n", n);
+	}
+	else if (n < 0)
+	{
+		printf("%d is negative\n", n);
+	}
+	else if (n == 0)
+	{
+		puts("0 is zero");
+	}
+	return (0);
+}
