@@ -1,15 +1,33 @@
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
 #include <stdio.h>
 
 /**
-* main - prints out a string using write
-* Description: Program that prints out the string s followed by a new line
+* main - prints out a random number value and last digit
+* Description: Program that uses rand, srand, RAND_MAX, math header
+* and code to output lines
 * Return: int 0 when done and no errors
 */
 
 int main(void)
 {
-        write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
-        , 59);
-        return (1);
-}
+	int n;
 
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n % 10 > 5)
+	{
+		printf("Last digit of %d is %d and is greater than 5\n", n, n % 10);
+	}
+	else if (n % 10 < 6 && n != 0)
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n"
+		, n, n % 10);
+	}
+	else if (n % 10 == 0)
+	{
+		printf("Last digit of %d is %d and is 0 and is 0\n", n, n % 10);
+	}
+	return (0);
+}
