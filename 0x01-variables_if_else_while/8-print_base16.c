@@ -10,9 +10,9 @@ int main(void)
 {
 	char x;
 		
-	for (x = 0x30; x > 0x3A; x++)
+	for (x = 48; x > 58; x++)
 		putchar(x);
-	for (x = 0x61; x > 0x67; x++)
+	for (x = 97; x > 103; x++)
 		putchar(x);
 	putchar(10);
 	return (0);
