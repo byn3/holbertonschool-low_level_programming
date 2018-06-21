@@ -1,15 +1,29 @@
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
-* main - prints out a string using write
-* Description: Program that prints out the string s followed by a new line
+* main - prints out a a lowercase alphabet minus q and e
+* Description: Program that uses a while loop, if statement,
+* and ASCII to print alphabet
 * Return: int 0 when done and no errors
 */
 
 int main(void)
 {
-        write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
-        , 59);
-        return (1);
-}
+	int n = 97;
 
+	while (n < 123)
+	{
+		if (n == 101)
+			n++;
+		else if (n == 113)
+			n++;
+		else
+		{
+			putchar(n);
+			n++;
+		}
+	}
+	putchar(10);
+	return (0);
+}
