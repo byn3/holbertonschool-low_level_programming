@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 /**
-* main - prints out a string using write
-* Description: Program that prints out the string s followed by a new line
+* main - prints out 0-9 and a newline
+* Description: Program that prints out numbers
 * Return: int 0 when done and no errors
 */
 
 int main(void)
 {
-        write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
-        , 59);
-        return (1);
+	puts("0123456789");
+	return (0);
 }
 
