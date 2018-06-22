@@ -18,7 +18,7 @@ int main(void)
 		a = i / 10;
 		b = i % 10;
 		for (j = i + 1; j <= 99; j++)
-		{	
+		{
 			c = j / 10 + '0';
 			d = j % 10 + '0';
 			putchar(a + '0');
