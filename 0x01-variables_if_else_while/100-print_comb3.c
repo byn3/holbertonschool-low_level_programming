@@ -2,8 +2,9 @@
 #include <stdlib.h>
 
 /**
-* main - prints out 0-9 with spaces and commas
-* Description: Program that prints out 0-9 using 1 loop and satements inside
+* main - prints out lowest of 2 numbers
+* Description: Program that combines 2 numbers amd
+* prints the lowest combination of the 2. duplicates like 11 are excluded
 * Return: int 0 when done and no errors
 */
 
