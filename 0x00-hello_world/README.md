@@ -45,26 +45,18 @@ So TLDR: Preprocessing, compiling, assembling, linker.*
 
 
 ## Each scripts and their output  
+*BLOG - Write a blog post that explains all the steps of compilation. Use command lines and examples to illustrate. Use gcc as the compiler. https://www.linkedin.com/pulse/what-happens-when-you-type-gcc-mainc-bryan-leung/?published=t  
 
 *Script 0 - Write a script that runs a C file through the preprocessor and save the result into another file. The C file name will be saved in the variable $CFILE. The output should be saved in the file c.  
 *Script 1 - Write a script that compiles a C file but does not link. The C file name will be saved in the variable $CFILE. The output file should be named the same as the C file, but with the extension .o instead of .c.  Example: if the C file is main.c, the output file should be main.o  
-*Script 2 - Display the content of /etc/passwd and /etc/hosts
-*Script 3 - Display the last 10 lines of /etc/passwd
-*Script 4 - Display the first 10 lines of /etc/passwd
-*Script 5 - Write a script that displays the third line of the file iacta. The file iacta will be in the working directory. You’re not allowed to use sed.
-*Script 6 - Write a shell script that creates a file named exactly *\'"Holberton School"'\$?*****:) containing the text Holberton School ending by a new line.
-*Script 7 - Write a script that writes into the file ls_cwd_content the result of the command ls -la. If the file ls_cwd_content already exists, it should be overwritten. If the file ls_cwd_content does not exist, create it.
-*Script 8 - Write a script that duplicates the last line of the file iacta. The file iacta will be in the working directory
-*Script 9 - Write a script that deletes all the regular files (not the directories) with a .js extension that are present in the current directory and all its subfolders.
-*Script 10 - Write a script that counts the number of directories and sub-directories in the current directory. The current and parent directories should not be taken into account. Hidden directories should be counted.
-*Script 11 - Create a script that displays the 10 newest files in the current directory.
-*Script 12 - Create a script that takes a list of words as input and prints only words that appear exactly once. Input format: One line, one word. Output format: One line, one word. Words should be sorted
-*Script 13 - Display lines containing the pattern “root” from the file /etc/passwd
-*Script 14 - Display the number of lines that contain the pattern “bin” in the file /etc/passwd
-*Script 15 - Display lines containing the pattern “root” and 3 lines after them in the file /etc/passwd.  
-*Script 16 - Display all the lines in the file /etc/passwd that do not contain the pattern “bin”.  
-*Script 17 - Display all lines of the file /etc/ssh/sshd_config starting with a letter.  
-*Script 18 - Replace all characters A and c from input to Z and e respectively.  
+*Script 2 - Write a script that generates the assembly code of a C code and save it in an output file. The C file name will be saved in the variable $CFILE. The output file should be named the same as the C file, but with the extension .s instead of .c. Example: if the C file is main.c, the output file should be main.s  
+*Script 3 - Write a script that compiles a C file and creates an executable named cisfun. The C file name will be saved in the variable $CFILE.  
+*Script 4 - Write a C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line. Use the function puts. You are not allowed to use printf. Your program should end with the value 0.  
+*Script 5 - Write a C program that prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line. Use the function printf. You are not allowed to use the function puts. Your program should return 0. Your program should compile without warning when using the -Wall gcc option.  
+*Script 6 - Write a C program that prints the size of various types on the computer it is compiled and run on. You should produce the exact same output as in the example. Warnings are allowed. Your program should return 0. You might have to install the package libc6-dev-i386 on your Linux (Vagrant) to test the -m32 gcc option.  
+*Script 100 - Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file. The C file name will be saved in the variable $CFILE. The output file should be named the same as the C file, but with the extension .s instead of .c. Example: if the C file is main.c, the output file should be main.s  
+*Script 101 - Write a C program that prints exactly and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error. You are not allowed to use any functions listed in the NAME section of the man (3) printf or man (3) puts. Your program should return 1. Your program should compile without any warnings when using the -Wall gcc option.  
+
 
 #### Limitation of C projects:
 ___
