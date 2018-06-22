@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
-* main - prints out 0-9 with spaces and commas
-* Description: Program that prints out 0-9 using 1 loop and satements inside
+* main - prints out 0-99 with spaces and commas
+* Description: Program that prints out 0-99 using 2 loop and satements inside
 * Return: int 0 when done and no errors
 */
 
