@@ -2,8 +2,9 @@
 #include <stdlib.h>
 
 /**
-* main - prints out 0-9 with spaces and commas
-* Description: Program that prints out 0-9 using 1 loop and satements inside
+* main - prints out triple combo numbers
+* Description: duplicates not allowed. This is the typical
+* x, y= x+1, z= y+1 algorithm. 3 loops nested and put the number
 * Return: int 0 when done and no errors
 */
 
