@@ -3,8 +3,8 @@
 
 /**
 * main - prints out quad combo numbers
-* Description: duplicates not allowed. This is the typical
-* x, y= x+1, z= y+1 algorithm. 3 loops nested and put the number
+* Description: duplicates allowed. This is the typical
+* x, y= x+1, z= y+1 algorithm. 4 loops nested and put the number
 * a = z+1 now and doing more math. char 32 is a space and 44 is a comma,
 * Return: int 0 when done and no errors
 */
