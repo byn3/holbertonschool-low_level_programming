@@ -1,12 +1,12 @@
 # What I learned from this project  
 At the end of this project you are expected to be able to explain to anyone, without the help of Google:  
----
+---   
 
 
 ## BLOG POST: What happens when you type gcc main.c?  
-https://www.linkedin.com/pulse/what-happens-when-you-type-gcc-mainc-bryan-leung/?published=t
+https://www.linkedin.com/pulse/what-happens-when-you-type-gcc-mainc-bryan-leung/?published=t   
 
-
+   
 **What are the arithmetic operators and how to use them?**  
 *+, -, *, /, %, ++, --. Self explanatory for all but %. % returns the remainder after integer division.*  
 
