@@ -4,37 +4,32 @@
 /**
 * main - prints out quad combo numbers
 * Description: duplicates allowed. This is the typical
-* x, y= x+1, z= y+1 algorithm. 4 loops nested and put the number
-* a = z+1 now and doing more math. char 32 is a space and 44 is a comma,
+* i j k l 4 variables 2 loops nested and put the number
+* now and doing more math. char 32 is a space and 44 is a comma,
 * Return: int 0 when done and no errors
 */
 
 int main(void)
 {
-	int x;
-	int y;
-	int z;
-	int a;
+	int i, j, a, b, c, d;
 
-	for (x = 48; x < 58; x++)
+	for (i = 0; i <= 98; i++)
 	{
-		for (y = 48; y < 58; y++)
-		{
-			for (z = x; z < 58; z++)
-			{
-				for (a = y + 1; a < 58; a++)
-				{
-				putchar(x);
-				putchar(y);
-				putchar(32);
-				putchar(z);
-				putchar(a);
-				if (x == 57 && y == 56 && z == 57 && a == 57)
-					break;
-				putchar(44);
-				putchar(32);
-				}
-			}
+		a = i / 10;
+		b = i % 10;
+		for (j = i + 1; j <= 99; j++)
+		{	
+			c = j / 10 + '0';
+			d = j % 10 + '0';
+			putchar(a + '0');
+			putchar(b + '0');
+			putchar(32);
+			putchar(c);
+			putchar(d);
+			if (a >= 9 && b >= 8 && c >= 9 && d >= 9)
+				break;
+			putchar(44);
+			putchar(32);
 		}
 	}
 	putchar(10);
