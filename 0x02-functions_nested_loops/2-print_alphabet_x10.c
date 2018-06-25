@@ -1,14 +1,14 @@
 #include "holberton.h"
 
 /**
-* main - program that prints out the alphabet with a new line
-* Description: Uses headers to link to another function
+* print_alphabet_x10 - program that prints out the alphabet 10 times
+* Description: Uses headers to link to another function and a nested loop
 * Return: int 0 when done and no errors
 */
 
 void print_alphabet_x10(void)
 {
-	int i,j;
+	int i, j;
 
 	for (i = 0; i < 10; i++)
 	{
