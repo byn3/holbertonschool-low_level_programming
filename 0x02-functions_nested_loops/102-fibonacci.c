@@ -22,7 +22,7 @@ int main(void)
 		if (i != 49)
 			printf("%llu, ", total);
 		else
-			printf("%llu",total);
+			printf("%llu", total);
 		i++;
 	}
 	printf("\n");
