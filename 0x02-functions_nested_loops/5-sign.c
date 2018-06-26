@@ -6,6 +6,7 @@
 *
 * Description: Uses headers to link to another function and checks sign
 * Probably could just do an easy bit check for the first bit field
+* but cant check for 0 using but fields
 * Return: int 0 when done and no errors
 */
 
