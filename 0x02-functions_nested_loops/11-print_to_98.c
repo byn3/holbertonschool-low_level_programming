@@ -9,7 +9,7 @@
 */
 
 void print_to_98(int n)
-{	
+{
 	int i, a, b, benjamin;
 
 	if (n == 98)
@@ -22,7 +22,7 @@ void print_to_98(int n)
 	{
 		for (i = n; i >= 98; i--)
 		{
-			if ( i >= 100)
+			if (i >= 100)
 			{
 				benjamin = i / 100 + '0';
 				a = ((i / 10) % 10) + '0';
@@ -39,7 +39,7 @@ void print_to_98(int n)
 				b = i % 10 + '0';
 				_putchar(a);
 				_putchar(b);
-				if ( i != 98)
+				if (i != 98)
 				{
 					_putchar(',');
 					_putchar(' ');
@@ -63,7 +63,7 @@ void print_to_98(int n)
 				_putchar(b);
 				_putchar(',');
 				_putchar(' ');
-                        }
+			}
 			else if (i < 0 && i <= -10)/* for -10 and beyond*/
 			{
 				_putchar('-');
@@ -71,7 +71,7 @@ void print_to_98(int n)
 				b = i % 10 + '0';
 				_putchar(a);
 				_putchar(b);
-				if ( i != 98)
+				if (i != 98)
 				{
 					_putchar(',');
 					_putchar(' ');
@@ -85,7 +85,7 @@ void print_to_98(int n)
 				_putchar(',');
 				_putchar(' ');
 			}
-			else if ( i >=  0 && i < 10)/* for 0-9 */
+			else if (i >=  0 && i < 10)/* for 0-9 */
 			{
 				b = i % 10 + '0';
 				_putchar(b);
@@ -98,7 +98,7 @@ void print_to_98(int n)
 				b = i % 10 + '0';
 				_putchar(a);
 				_putchar(b);
-				if ( i != 98)
+				if (i != 98)
 				{
 					_putchar(',');
 					_putchar(' ');
