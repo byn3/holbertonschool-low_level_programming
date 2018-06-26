@@ -15,7 +15,7 @@ int main(void)
 	i = 1;
 	first = 0;
 	second = 1;
-	while (i < 51)
+	while (i < 50)
 	{
 		total = first + second;
 		first = second;
