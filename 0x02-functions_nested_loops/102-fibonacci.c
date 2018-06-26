@@ -2,22 +2,26 @@
 #include <stdio.h>
 
 /**
-* main - prints fizz bizz type of stuff.
-* Description : add up the sums of multiples of 3 and 5 till 1024
+* main - prints the first 50 fib numbers
+* Description : prints the fub numbers up to the 50th with new lines
 * Return: 0 if no error.
 */
 int main(void)
 {
-	int i, total = 0;
+	int i, first, second;
+	long total;
 
-	while (i < 1024)
+	i = 1;
+	first = 0;
+	second = 1;
+	while (i < 51)
 	{
-		if ((i % 3) == 0)
-			total += i;
-		else if ((i % 5) == 0)
-			total += i;
+		total = first + second;
+		first = second;
+		second = total;
+		printf("%ld, \n", total);
 		i++;
+
 	}
-	printf("%i\n", total);
 	return (0);
 }
