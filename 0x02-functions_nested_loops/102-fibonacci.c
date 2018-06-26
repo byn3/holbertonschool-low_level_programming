@@ -8,18 +8,20 @@
 
 int main(void)
 {
-	long i, first, second, total;
+	long i, total, fib1, fib2;
 
 	i = 1;
-	first = 0;
-	second = 1;
-	while (i <= 49)
+	fib1 = 0;
+	fib2 = 1;
+	while (i <= 50)
 	{
-		total = first + second;
-		first = second;
-		second = total;
-		if (i != 49)
+		total = fib1 + fib2;
+		fib2 = fib1;
+		fib1 = total;
+		if (i != 50  && i != 1)
 			printf("%ld, ", total);
+		else if (i == 1)
+			;
 		else
 			printf("%ld", total);
 		i++;
