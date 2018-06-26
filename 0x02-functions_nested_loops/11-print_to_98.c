@@ -54,9 +54,9 @@ void print_to_98(int n)
 			if (i < 0 && i <= -100)/* for -100 and beyond*/
 			{
 				_putchar('-');
-				benjamin = i / 100 + '0';
-				a = ((i / 10) % 10) + '0';
-				b = i % 10 + '0';
+				benjamin = -i / 100 + '0';
+				a = ((-i / 10) % 10) + '0';
+				b = -i % 10 + '0';
 				_putchar(benjamin);
 				_putchar(a);
 				_putchar(b);
