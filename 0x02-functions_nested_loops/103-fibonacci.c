@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	long fib1 = 1, fib2 = 2, total = 0, summed = 0;
+	long fib1 = 1, fib2 = 1, total = 0, summed = 0;
 
 	while (total < 4000000)
 	{
