@@ -67,7 +67,7 @@ void print_to_98(int n)
 			{
 				_putchar('-');
 				a = -i / 10 + '0';
-				b = i % 10 + '0';
+				b = -i % 10 + '0';
 				_putchar(a);
 				_putchar(b);
 				if (i != 98)
