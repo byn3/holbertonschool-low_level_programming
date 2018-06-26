@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -15,12 +14,15 @@ int main(void)
 	i = 1;
 	first = 0;
 	second = 1;
-	while (i < 51)
+	while (i <= 49)
 	{
 		total = first + second;
 		first = second;
 		second = total;
-		printf("%llu, ", total);
+		if (i != 49)
+			printf("%llu, ", total);
+		else
+			printf("%llu",total);
 		i++;
 	}
 	printf("\n");
