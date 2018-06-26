@@ -13,12 +13,12 @@ int main(void)
 	i = 1;
 	fib1 = 0;
 	fib2 = 1;
-	while (i <= 50)
+	while (i <= 51)
 	{
 		total = fib1 + fib2;
 		fib2 = fib1;
 		fib1 = total;
-		if (i != 50  && i != 1)
+		if (i != 51  && i != 1)
 			printf("%ld, ", total);
 		else if (i == 1)
 			;
