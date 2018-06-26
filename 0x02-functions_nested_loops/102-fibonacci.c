@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i;
-	long long first, second, total;
+	long first, second, total;
 
 	i = 1;
 	first = 0;
@@ -20,9 +20,9 @@ int main(void)
 		first = second;
 		second = total;
 		if (i != 49)
-			printf("%llu, ", total);
+			printf("%ld, ", total);
 		else
-			printf("%llu", total);
+			printf("%ld", total);
 		i++;
 	}
 	printf("\n");
