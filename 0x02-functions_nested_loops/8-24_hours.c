@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
-* jack_bauer - prints the last digit
-* Description: Uses headers to link to another function and checcks stuff
+* jack_bauer - prints the time from 00:00 to 23:59
+* Description: Uses headers to link to another function and checks stuff
 * Probably could just do an easy bit check for the first bit field
 * Return: int 0 when done and no errors
 */
