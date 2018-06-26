@@ -5,6 +5,8 @@
 * @n: An int given by main
 *
 * Description: Uses headers to link to another function and loops for output
+* IM SUCH A F***EN IDIOT I WAS ALLOWED TO USE THE STANDARD LIBRAY FOR THIS
+* PROBLEM ERMAAAHHGAWDD I DIDNT NEED 100 LINES ONLY LIKE 40
 */
 
 void print_to_98(int n)
