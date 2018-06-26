@@ -18,11 +18,11 @@ void print_to_98(int n)
 		_putchar('8');
 		_putchar('\n');
 	}
-	else if (n > 98)
+	else if (n > 98)/* if n is bigger than 98 */
 	{
 		for (i = n; i >= 98; i--)
 		{
-			if (i >= 100)
+			if (i >= 100)/* if n is bigger than 100*/
 			{
 				benjamin = i / 100 + '0';
 				a = ((i / 10) % 10) + '0';
@@ -48,7 +48,7 @@ void print_to_98(int n)
 		}
 		_putchar('\n');
 	}
-	else
+	else /* n is less than 98*/
 	{
 		for (i = n; i <= 98; i++)
 		{
