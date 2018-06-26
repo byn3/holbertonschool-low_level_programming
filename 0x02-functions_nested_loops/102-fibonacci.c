@@ -8,8 +8,8 @@
 */
 int main(void)
 {
-	int i, first, second;
-	long total;
+	int i;
+	long long first, second, total;
 
 	i = 1;
 	first = 0;
@@ -19,7 +19,7 @@ int main(void)
 		total = first + second;
 		first = second;
 		second = total;
-		printf("%ld, \n", total);
+		printf("%llu, \n", total);
 		i++;
 
 	}
