@@ -6,6 +6,7 @@
 * Description : prints the fub numbers up to the 50th with new lines
 * Return: 0 if no error.
 */
+
 int main(void)
 {
 	int i;
@@ -21,7 +22,6 @@ int main(void)
 		second = total;
 		printf("%llu, \n", total);
 		i++;
-
 	}
 	return (0);
 }
