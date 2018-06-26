@@ -2,7 +2,7 @@
 
 /**
 * main - prints the first 50 fib numbers
-* Description : prints the fub numbers up to the 50th with new lines
+* Description: prints the fub numbers up to the 50th with new lines
 * Return: 0 if no error.
 */
 
