@@ -8,49 +8,74 @@
 
 void print_times_table(int n)
 {
-	int i, j, whole, tens, ones = 0;
+	int i, j, whole, benjamin, tens, ones = 0;
 
-	for (i = 0; i <= 9; i++)
+	if (n == 0)
+		_putchar('0');
+	else if (n <= 15 && n >= 0)
 	{
-		for (j = 0; j <= 9; j++)
+		for (i = 0; i <= n; i++)
 		{
-			whole = i * j;
-			tens = whole / 10 + '0';
-			ones = whole % 10 + '0';
-			if (j == 0)
+			for (j = 0; j <= n; j++)
 			{
-				_putchar('0');
-				_putchar(',');
-				_putchar(' ');
-			}
-			else if (j == 9)
-			{
-				if (whole > 10)
+				whole = i * j;
+				benjamin = whole / 100 + '0';
+				tens = ((whole / 10) % 10) + '0';
+				ones = whole % 10 + '0';
+				if (j == 0)/* the very left column */
 				{
+					_putchar('0');
+					_putchar(',');
+					_putchar(' ');
+				}
+				else if (j == n)/* the very right column */
+				{
+					if (whole >= 100)
+					{
+						_putchar(benjamin);
+						_putchar(tens);
+						_putchar(ones);
+					}
+					else if (whole >= 10)
+					{
+						_putchar(' ');
+						_putchar(tens);
+						_putchar(ones);
+					}
+					else
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(ones);
+					}
+				}
+				else if (whole < 10)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(ones);
+					_putchar(',');
+					_putchar(' ');
+				}
+				else if (whole < 100)
+				{
+					_putchar(' ');
 					_putchar(tens);
 					_putchar(ones);
+					_putchar(',');
+					_putchar(' ');
 				}
 				else
 				{
-					_putchar(' ');
+					_putchar(benjamin);
+					_putchar(tens);
 					_putchar(ones);
+					_putchar(',');
+					_putchar(' ');
+
 				}
 			}
-			else if (whole < 10)
-			{
-				_putchar(' ');
-				_putchar(ones);
-				_putchar(',');
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar(tens);
-				_putchar(ones);
-				_putchar(',');
-				_putchar(' ');
-			}
+		_putchar('\n');
 		}
-	_putchar('\n');
 	}
 }
