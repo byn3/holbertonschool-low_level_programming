@@ -20,8 +20,9 @@ int main(void)
 		total = first + second;
 		first = second;
 		second = total;
-		printf("%llu, \n", total);
+		printf("%llu, ", total);
 		i++;
 	}
+	printf("\n");
 	return (0);
 }
