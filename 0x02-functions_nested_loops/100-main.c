@@ -19,7 +19,7 @@ int main(void)
 	_putchar('\n');
     print_times_table(16);
 	_putchar('\n');
-    print_times_table(18);
+    print_times_table(0);
 	_putchar('\n');
 	 return (0);
 }
