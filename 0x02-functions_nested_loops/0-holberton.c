@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-* main - program that prints out Holberton with a new line
+* main - program that inserts Holberton with a new line
 * Description: Uses a local library and focuses on using functions and a loop
 * Return: int 0 when done and no errors
 */
