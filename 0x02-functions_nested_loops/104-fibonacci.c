@@ -2,7 +2,7 @@
 
 /**
 * main - prints the first 98 fib numbers
-* Description: no libraries or long long.
+* Description: cannot use any extra libraries or long long.
 * Must use overflow methods
 * Return: 0 if no error.
 */
