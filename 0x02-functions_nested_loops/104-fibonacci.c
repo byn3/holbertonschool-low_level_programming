@@ -48,7 +48,7 @@ int main(void)
 			if (i < 98)
 				printf("%ld%ld, ", totala, totalb);
 			else
-				printf("%ldld", totala, totalb);
+				printf("%ld%ld", totala, totalb);
 		}
 		i++;
 	}
