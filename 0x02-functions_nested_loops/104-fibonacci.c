@@ -11,7 +11,7 @@ int main(void)
 	long i = 0, fib1 = 0, fib2 = 1, total = 0;
 	long fib1a, fib1b, fib2a, fib2b, totala, totalb, overflow;
 	
-	while (i <= 92)
+	while (i <= 98)
 	{
 		if (i < 92)
 		{
