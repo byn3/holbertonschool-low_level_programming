@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
-* main - prints the sum of fib numbers
-* Description: cannot past 4 million. evens only
+* main - prints the first 98 fib numbers
+* Description: no libraries or long long.
+* Must use overflow methods
 * Return: 0 if no error.
 */
 
