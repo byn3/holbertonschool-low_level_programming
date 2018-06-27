@@ -11,7 +11,7 @@ int main(void)
 	long i = 0, fib1 = 0, fib2 = 1, total = 0;
 	long fib1a, fib1b, fib2a, fib2b, totala, totalb, overflow;
 	
-	while (i <= 98)
+	while (i <= 92)
 	{
 		if (i < 92)
 		{
@@ -26,12 +26,21 @@ int main(void)
 			fib1b = fib1 % 1000000000;
 			fib2a = fib2 / 1000000000;
 			fib2b = fib2 % 1000000000;
+			
+			overflow = (fib1b + fib2b) / 1000000000;
+			totala = (fib1a + fib2a) + overflow;
+			totalb = (fib1b + fib2b) - overflow * 1000000000;
+			fib1b = fib2b;
+			fib2b = totalb;
+			fib1a = fib2a;
+			fib2a = totala;
+			printf("%ld%ld, ", totala, totalb);
 		}
 		else/* int overflow starts when we at 93*/
 		{
 			overflow = (fib1b + fib2b) / 1000000000;
 			totala = (fib1a + fib2a) + overflow;
-			totalb = (fib2a + fib2b) - overflow * 1000000000;
+			totalb = (fib1b + fib2b) - overflow * 1000000000;
 			fib1b = fib2b;
 			fib2b = totalb;
 			fib1a = fib2a;
