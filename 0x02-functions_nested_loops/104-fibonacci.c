@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define BILLION 1000000000
 
 /**
 * main - prints the sum of fib numbers
@@ -8,10 +9,10 @@
 
 int main(void)
 {
-	long i, fib1 = 0, fib2 = 1, total = 0;
+	long i, fib1, fib2, total, fib1a, fib2a, fib2a, fib2b, totala, totalb = 0;
 
-	i = 0;
-	while (i <= 15)
+	fib2 = 1;
+	while (i <= 79)
 	{
 		total = fib1 + fib2;
 		fib2 = fib1;
@@ -21,6 +22,20 @@ int main(void)
 		else if (i != 0)
 			printf("%ld, ", total);
 		i++;
+		
+		if (i >= 90)/* int overflow starts when we at around 92 and 93*/
+		{
+			totala = total / BILLION;
+			totalb = total % BILLION;
+			fib1a = fib1 / BILLION;
+			fib1b = fib1 % BILLION;
+			fib2a = fib2 / BILLION;
+			fib2b = fib2 % BILLION;
+
+
+
+		}
+
 	}
 	return (0);
 }
