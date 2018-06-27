@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int i, overflow;
+	int i, overflowRIGHT, overflowLEFT;
 	unsigned long fib1 = 1, fib2 = 1, total = 0;
 	unsigned long fibONE_left, fibONE_right;
 	unsigned long fibTWO_left, fibTWO_right;
@@ -36,13 +36,16 @@ int main(void)
 		{
 			for (i = 92; i <= 98; i++)/* int overflow starts when we at 93*/
 			{
-				overflow = (fibONE_right + fibTWO_right) / 1000000000;
-				total_LEFT = (fibONE_left + fibTWO_left) + overflow;
-				total_RIGHT = (fibONE_right + fibTWO_right) - overflow;
-				if (i < 98)
-					printf("%lu%lu, ", total_LEFT, total_RIGHT);
+				overflowRIGHT = (fibONE_right + fibTWO_right) / 1000000000;
+				overflowLEFT = (fibTWO_left + fibTWO_right) / 1000000000;
+				total_LEFT = (fibONE_left + fibTWO_left) + overflowRIGHT;
+				total_RIGHT = (fibONE_right + fibTWO_right) - (overflowRIGHT * 1000000000);
+				if (i < 98 && overflowRIGHT <= 0)
+					printf("%10lu%10lu, ", total_LEFT, total_RIGHT);
+				else if ( i < 98 && overflowLEFT > 0)
+					printf("%d%11lu%11lu, ", overflowLEFT, total_LEFT, total_RIGHT);
 				else
-					printf("%lu%lu", total_LEFT, total_RIGHT);
+					printf("%11lu%11lu", total_LEFT, total_RIGHT);
 
 				fibONE_left = fibTWO_left;
 				fibONE_right = fibTWO_right;
