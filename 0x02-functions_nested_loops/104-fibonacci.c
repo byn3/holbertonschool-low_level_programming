@@ -1,5 +1,6 @@
 #include <stdio.h>
 #define BILLION 1000000000
+
 /**
 * main - prints the first 98 fib numbers
 * Description: cannot use any extra libraries or long long.
@@ -9,7 +10,7 @@
 
 int main(void)
 {
-	int i, overflowRIGHT;
+	int i;
 	unsigned long fib1 = 0, fib2 = 1, total = 0;
 	unsigned long fibONE_left, fibONE_right;
 	unsigned long fibTWO_left, fibTWO_right;
