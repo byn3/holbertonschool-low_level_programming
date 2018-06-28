@@ -14,15 +14,19 @@ int main(void)
 	unsigned long biggest = 0;
 	unsigned long number = 612852475143;
 
+	/* we will only check to the sqrt of the number because math*/
 	squareRoot = (sqrt(number) / 10) * 10;
 	while (number > squareRoot)
-	{
+	{/* while the number is bigger than the current sqrt, check modulus*/
 		while (number % i == 0)
-		{
+		{/*if the current number is moded by i, check if biggest*/
+		/* and strip away by a factor of i, reducing number*/
+		/* this also helps decrement the while loop */
 			if (i > biggest)
 				biggest = i;
 			number = number / i;
 		}
+		/*increase i because no current factor of i was found */
 		i++;
 	}
 	printf("%lu\n", biggest);
