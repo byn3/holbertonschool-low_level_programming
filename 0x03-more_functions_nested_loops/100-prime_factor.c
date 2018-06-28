@@ -15,7 +15,7 @@ int main(void)
 	unsigned long number = 612852475143;
 
 	squareRoot = (sqrt(number) / 10) * 10;
-	while ( number > squareRoot)
+	while (number > squareRoot)
 	{
 		while (number % i == 0)
 		{
