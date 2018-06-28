@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#define BILLION 1000000000
 /**
 * main - prints the first 98 fib numbers
 * Description: cannot use any extra libraries or long long.
@@ -9,52 +9,41 @@
 
 int main(void)
 {
-	int i, overflowRIGHT, overflowLEFT;
-	unsigned long fib1 = 1, fib2 = 1, total = 0;
+	int i, overflowRIGHT;
+	unsigned long fib1 = 0, fib2 = 1, total = 0;
 	unsigned long fibONE_left, fibONE_right;
 	unsigned long fibTWO_left, fibTWO_right;
 	unsigned long total_LEFT, total_RIGHT;
-
-	i = 0;
-	printf("1");
-	while (i <= 98)
+	
+	fib1 = 1;
+	fib2 = 2;
+	total = fib1 + fib2;
+	printf("%lu, ", fib1);
+	printf("%lu, ", fib2);
+	
+	for (i = 3; i < 90; i++)
 	{
-		if (i < 92)
-		{
-			total = fib1 + fib2;
-			fib1 = fib2;
-			fib2 = total;
-			printf("%lu, ", total);
-		}
-
-		fibONE_left = fib1 / 1000000000;
-		fibONE_right = fib1 % 1000000000;
-		fibTWO_left = fib2 / 1000000000;
-		fibTWO_right = fib2 % 1000000000;
-
-		if (i == 92)
-		{
-			for (i = 92; i <= 98; i++)/* int overflow starts when we at 93*/
-			{
-				overflowRIGHT = (fibONE_right + fibTWO_right) / 1000000000;
-				overflowLEFT = (fibTWO_left + fibTWO_right) / 1000000000;
-				total_LEFT = (fibONE_left + fibTWO_left) + overflowRIGHT;
-				total_RIGHT = (fibONE_right + fibTWO_right) - (overflowRIGHT * 1000000000);
-				if (i < 98 && overflowRIGHT <= 0)
-					printf("%10lu%10lu, ", total_LEFT, total_RIGHT);
-				else if ( i < 98 && overflowLEFT > 0)
-					printf("%d%11lu%11lu, ", overflowLEFT, total_LEFT, total_RIGHT);
-				else
-					printf("%11lu%11lu", total_LEFT, total_RIGHT);
-
-				fibONE_left = fibTWO_left;
-				fibONE_right = fibTWO_right;
-				fibTWO_left = total_LEFT;
-				fibTWO_right = total_RIGHT;
-			}
-		}
-		i++;
+		printf("%lu, ", total);
+		fib1 = fib2;
+		fib2 = total;
+		total = fib1 + fib2;
 	}
-	printf("\n");
+	
+	fibTWO_left = fib2 / BILLION;
+	fibTWO_right = fib2 % BILLION;
+	total_LEFT = total / BILLION;
+	total_RIGHT = total % BILLION;
+	
+	for (i = 90; i < 98; i++)
+	{
+		printf("%lu%lu, ", total_LEFT, total_RIGHT);
+		fibONE_left = fibTWO_left;
+		fibONE_right = fibTWO_right;
+		fibTWO_left = total_LEFT;
+		fibTWO_right = total_RIGHT;
+		total_LEFT = (fibONE_left + fibTWO_left) + ((fibONE_right + fibTWO_right) / BILLION);
+		total_RIGHT = (fibONE_right + fibTWO_right) % BILLION;
+	}
+	printf("%lu%lu\n", total_LEFT, total_RIGHT);
 	return (0);
 }
