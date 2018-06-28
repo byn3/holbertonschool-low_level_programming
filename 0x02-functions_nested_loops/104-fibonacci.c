@@ -42,7 +42,8 @@ int main(void)
 		fibONE_right = fibTWO_right;
 		fibTWO_left = total_LEFT;
 		fibTWO_right = total_RIGHT;
-		total_LEFT = (fibONE_left + fibTWO_left) + ((fibONE_right + fibTWO_right) / BILLION);
+		total_LEFT = (fibONE_left + fibTWO_left) +
+			((fibONE_right + fibTWO_right) / BILLION);
 		total_RIGHT = (fibONE_right + fibTWO_right) % BILLION;
 	}
 	printf("%lu%lu\n", total_LEFT, total_RIGHT);
