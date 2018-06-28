@@ -6,23 +6,26 @@
 * fizz buzz from 1-100. print fizz for multiples of 3 and buzz for
 * multiples of 5 and fizzbuzz for multiples of both eg. 15
 * could use a switch for neater and better code
-* Return: void. no return.
+* Return: 0 if no errors
 */
 
-void main(void)
+int main(void)
 {
 	int i;
-
+	
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
-			printf(" FizzBuzz");
+			printf("FizzBuzz");
 		else if (i % 3 == 0)
-			printf(" Fizz");
+			printf("Fizz");
 		else if (i % 5 == 0)
-			printf(" Buzz");
+			printf("Buzz");
 		else
-			printf(" %d", i);
+			printf("%d", i);
+
+		printf(" ");
 	}
-	puts('\n');
+	printf("\n");
+	return (0);
 }
