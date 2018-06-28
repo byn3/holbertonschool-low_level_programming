@@ -15,13 +15,13 @@ int main(void)
 	unsigned long fibONE_left, fibONE_right;
 	unsigned long fibTWO_left, fibTWO_right;
 	unsigned long total_LEFT, total_RIGHT;
-	
+
 	fib1 = 1;
 	fib2 = 2;
 	total = fib1 + fib2;
 	printf("%lu, ", fib1);
 	printf("%lu, ", fib2);
-	
+
 	for (i = 3; i < 90; i++)
 	{
 		printf("%lu, ", total);
@@ -29,12 +29,12 @@ int main(void)
 		fib2 = total;
 		total = fib1 + fib2;
 	}
-	
+
 	fibTWO_left = fib2 / BILLION;
 	fibTWO_right = fib2 % BILLION;
 	total_LEFT = total / BILLION;
 	total_RIGHT = total % BILLION;
-	
+
 	for (i = 90; i < 98; i++)
 	{
 		printf("%lu%lu, ", total_LEFT, total_RIGHT);
