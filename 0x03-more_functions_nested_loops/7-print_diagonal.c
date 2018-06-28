@@ -21,7 +21,8 @@ void print_diagonal(int n)
 	/* i is the inital spacing needed eg. for 10*/
 	/* j is the counter. j = 10 - 0 , 10 is not less than 10, so skip*/
 	/* now j = 9, 9 < 10 true, do once */
-	/* omg i am a genius */
+	/* omg i am a genius UPDATENVM. im an idiot. i could have  */
+	/* just done a i = j check and insert \ if true and space if not*/
 		for (j = n - i; j < n; j++)
 		{
 			_putchar(' ');
