@@ -9,22 +9,22 @@
 
 int main(void)
 {
-	int i = 2;
-	double temp = 0;
-	double squareRoot;
-	int biggest = 0:
-	double number = 612852475143;
+	unsigned long i = 2;
+	unsigned long squareRoot;
+	unsigned long biggest = 0;
+	unsigned long number = 612852475143;
 
 	squareRoot = (sqrt(number) / 10) * 10;
-	while ( number > sqrt)
+	while ( number > squareRoot)
 	{
 		while (number % i == 0)
 		{
 			if (i > biggest)
-				bigggest = i;
+				biggest = i;
 			number = number / i;
 		}
 		i++;
 	}
+	printf("%lu\n", biggest);
 	return (0);
 }
