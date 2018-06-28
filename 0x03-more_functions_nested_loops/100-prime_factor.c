@@ -27,6 +27,8 @@ int main(void)
 			number = number / i;
 		}
 		/*increase i because no current factor of i was found */
+		/* and by 2 because we do not need to check when i is even.*/
+		/* but i cant get my code to work with i+=2. */
 		i++;
 	}
 	printf("%lu\n", biggest);
