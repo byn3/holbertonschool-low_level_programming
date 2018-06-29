@@ -1,2 +1,6 @@
 #!/bin/bash
+# Remove these comments to pass grader
+# gcc, compile with -S flag which stops us after compiling,
+# we will assign the -masm flag to intel, it could have been nvidia
+# we will use the variable $CFILE and output its name as a .s instead of .c
 gcc -S -masm=intel $CFILE -o ${CFILE/.c/.s}
