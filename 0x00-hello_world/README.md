@@ -1,7 +1,7 @@
 # What I learned from this project  
 At the end of this project you are expected to be able to explain to anyone, without the help of Google:  
 ---
-*BLOG - Write a blog post that explains all the steps of compilation. Use command lines and examples to illustrate. Use gcc as the compiler. https://www.linkedin.com/pulse/what-happens-when-you-type-gcc-mainc-bryan-leung/?published=t    
+##  BLOG - Write a blog post that explains all the steps of compilation. Use command lines and examples to illustrate. Use gcc as the compiler. https://www.linkedin.com/pulse/what-happens-when-you-type-gcc-mainc-bryan-leung/?published=t    
 
 
 **Why C programming is awesome?**  
