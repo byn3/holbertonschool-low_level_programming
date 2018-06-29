@@ -5,6 +5,23 @@
 * main - finds the largest prime
 * Description: Uses headers to link and a nested loops to achieve goal
 * Return: 0 if no errors
+* A: Sqrt is a double by default so I did this to get rid of decimals.
+* B: While the number is bigger than the sqrt of the original number.
+* Why? Because if the number is prime my loop will go until the number.
+* If it has a factor then we know the largest possible prime factor
+* it can have, is less than the sqrt of the original number.
+* Math concept here, don’t need to check full length
+* saves lots of time to log n I think. This is a hard concept
+* C: If the current number can be modulo’d by i, check if i is bigger
+* than biggest. We then chunk the number by the i, reducing it and
+* running the loop with the same i to further chuck it down, if possible.
+* This makes number smaller and smaller which will be checked
+* in the outer while loop. This helps check for prime and factors.
+* D: Increase i because number was no longer modulo’d by i.
+* I could have put i+=2 to half the speed of the program since we do
+* not need to check for even modulus since 2 handles that, but I would
+* have to refactor my code, starting with a i = 2 loop then start
+* my code with i=3. In this current code of mine, I have i = 2.
 */
 
 int main(void)
@@ -14,22 +31,15 @@ int main(void)
 	unsigned long biggest = 0;
 	unsigned long number = 612852475143;
 
-	/* we will only check to the sqrt of the number because math*/
-	squareRoot = (sqrt(number) / 10) * 10;
-	while (number > squareRoot)
-	{/* while the number is bigger than the current sqrt, check modulus*/
-		while (number % i == 0)
-		{/*if the current number is moded by i, check if biggest*/
-		/* and strip away by a factor of i, reducing number*/
-		/* this also helps decrement the while loop */
+	
+	squareRoot = (sqrt(number) / 10) * 10; /* A */
+	while (number > squareRoot)/* B */
+		while (number % i == 0)/* C */
 			if (i > biggest)
 				biggest = i;
 			number = number / i;
 		}
-		/*increase i because no current factor of i was found */
-		/* and by 2 because we do not need to check when i is even.*/
-		/* but i cant get my code to work with i+=2. */
-		i++;
+		i++;/* D */
 	}
 	printf("%lu\n", biggest);
 	return (0);
