@@ -34,7 +34,9 @@ int main(void)
 	
 	squareRoot = (sqrt(number) / 10) * 10; /* A */
 	while (number > squareRoot)/* B */
+	{
 		while (number % i == 0)/* C */
+		{
 			if (i > biggest)
 				biggest = i;
 			number = number / i;
