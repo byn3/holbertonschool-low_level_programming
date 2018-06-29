@@ -17,8 +17,8 @@
 * it’s big. If it is a 1 digit number we print out the
 * punctuation and the 1 number, if it was bigger than 10 but less
 * than 100 then we print tens and ones with the punctuation. Etc.
-* I saw code during the peer review that could greatly cut down
-* the specific formatting checks I have I could print 0s
+* Extra tips I learned: I saw code during the peer review that could
+* greatly cut down the specific formatting checks I have I could print 0s
 * for the left most column if I move that code to the outer loop,
 * I could print spaces first then numbers last instead of
 * sometimes putting spacing at the end. 
