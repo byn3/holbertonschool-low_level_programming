@@ -24,15 +24,19 @@ At the end of this project you are expected to be able to explain to anyone, wit
 *Header files are files with a .h extension which contain C function declarations and macro definitions. Two types of header files, ones the programmer makes and ones that come with the compiler. By using #include we request to use a header file. Including it is equal to copying the content of the header file. <> is for standard list of directories and "" is for local self made programs.*  
 
 ## Each scripts and their output  
-* Script 0 - Write a program that prints Holberton, followed by a new line. The program should return 0.  
-* Script 1 - Write a function that prints the alphabet, in lowercase, followed by a new line. Prototype: void print_alphabet(void); You can only use _putchar twice in your code.  
-* Script 2 -  Write a function that prints 10 times the alphabet, in lowercase, followed by a new line. Prototype: void print_alphabet_x10(void); You can only use _putchar twice in your code.  
-*Script 3 - Write a function that checks for lowercase character. Prototype: int _islower(int c). Returns 1 if c is lowercase. Returns 0 otherwise. FYI: The standard library provides a similar function: islower. Run man islower to learn more.  
-* Script 4 - Write a function that checks for alphabetic character. Prototype: int _isalpha(int c); Returns 1 if c is a letter, lowercase or uppercase. Returns 0 otherwise. FYI: The standard library provides a similar function: isalpha. Run man isalpha to learn more.  
-* Script 5 - Write a function that prints the sign of a number. Prototype: int print_sign(int n); Returns 1 and prints + if n is greater than zero. Returns 0 and prints 0 if n is zero. Returns -1 and prints - if n is less than zero.  
-* Script 6 - Write a function that computes the absolute value of an integer. Prototype: int _abs(int); FYI: The standard library provides a similar function: abs. Run man abs to learn more.  
-* Script 7 - Write a function that prints the last digit of a number. Prototype: int print_last_digit(int); Returns the value of the last digit.  
-* Script 8 - Write a function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59. Prototype: void jack_bauer(void); You can listen to this soundtrack while coding :).  
+* Script 0 - Write a function that checks for uppercase character. Prototype: int _isupper(int c). Returns 1 if c is uppercase. Returns 0 otherwise. FYI: The standard library provides a similar function: isupper. Run man isupper to learn more.  
+* Script 1 - Write a function that checks for a digit (0 through 9). Prototype: int _isdigit(int c); Returns 1 if c is a digit. Returns 0 otherwise. FYI: The standard library provides a similar function: isdigit. Run man isdigit to learn more.    
+* Script 2 -  Write a function that multiplies two integers. Prototype: int mul(int a, int b);  
+* Script 3 - Write a function that prints the numbers, from 0 to 9, followed by a new line. Prototype: void print_numbers(void); You can only use _putchar twice in your code.  
+* Script 4 - Write a function that prints the numbers, from 0 to 9, followed by a new line. Prototype: void print_most_numbers(void); Do not print 2 and 4. You can only use _putchar twice in your code.  
+* Script 5 - Write a function that prints 10 times the numbers, from 0 to 14, followed by a new line. Prototype: void more_numbers(void); You can only use _putchar three times in your code.   
+* Script 6 - Write a function that draws a straight line in the terminal. Prototype: void print_line(int n); You can only use _putchar function to print. Where n is the number of times the character _ should be printed. The line should end with a \n. If n is 0 or less, the function should only print \n. 
+* Script 7 - Write a function that draws a diagonal line on the terminal. Prototype: void print_diagonal(int n); You can only use _putchar function to print. Where n is the number of times the character \ should be printed. The diagonal should end with a \n. If n is 0 or less, the function should only print a \n.  
+* Script 8 - Write a function that prints a square, followed by a new line. Prototype: void print_square(int size); You can only use _putchar function to print. Where size is the size of the square. If size is 0 or less, the function should print only a new line. Use the character # to print the square.  
+* Script 9 - Write a program that prints the numbers from 1 to 100, followed by a new line. But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz. Each number or word should be separated by a space. You are allowed to use the standard library.  
+* Script 10 - Write a function that prints a triangle, followed by a new line. Prototype: void print_triangle(int size); You can only use _putchar function to print. Where size is the size of the triangle. If size is 0 or less, the function should print only a new line. Use the character # to print the triangle.   
+* Script 100 - Write a program that finds and prints the largest prime factor of the number 612852475143, followed by a new line. You are allowed to use the standard library. Your program will be compiled with this command: gcc -Wall -pedantic -Werror -Wextra 100-prime_factor.c -o 100-prime_factor -lm  
+* Script 101 - Write a function that prints an integer. Prototype: void print_number(int n); You can only use _putchar function to print. You are not allowed to use long. You are not allowed to use arrays or pointers. You are not allowed to hard-code special values.  
 
 #### Limitation of these projects:  
 ___
