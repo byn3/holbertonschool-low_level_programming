@@ -4,7 +4,7 @@
 /**
 * main - prints out quad combo numbers
 * Description: duplicates allowed. This is the typical
-* i j k l 4 variables 2 loops nested and put the number
+* i, j, k, l= 4 variables 2 loops nested and put the number
 * now and doing more math. char 32 is a space and 44 is a comma,
 * Return: int 0 when done and no errors
 * A: Outer Loop. Loop through 98 times
