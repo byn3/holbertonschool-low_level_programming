@@ -9,20 +9,30 @@
 * I tried a sizeof(s) strat at firest
 */
 
+int _strlen(char *s)
+{
+	int counter = 0;
+
+	while (s[counter] != '\0')
+        {
+		counter++;
+	}
+	return counter;
+}
+
 void print_rev(char *s)
 {
-	char *end;
-	char temp;
-	end = s;
-	while (end != '\0')
-		end++;
-	end--;/* since we want string length - 1 for the end*/
-	for (; s < end; s++, end--)
+	char letter;
+	char *begin = s;
+	char *end = begin + _strlen(s) - 1;
+
+	if (*s == '\0')
+		return;
+	while ( end > begin)
 	{
-		temp = end;
-		end = (char) s;
-		s = temp;
-		_putchar(temp);
+		letter = *end;
+		*end-- = *begin;
+		*begin++ = letter;
+		_putchar(letter);
 	}
-	_putchar(10);
 }
