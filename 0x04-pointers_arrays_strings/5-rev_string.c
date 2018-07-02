@@ -10,22 +10,24 @@
 */
 
 int _strlen(char *s)
-{	
+{
 	int counter = 0;
 
 	while (s[counter] != '\0')
-	{
+        {
 		counter++;
 	}
 	return counter;
 }
 
-
 void print_rev(char *s)
 {
 	char letter;
+	char *begin = s;
 	char *end = begin + _strlen(s) - 1;
 
+	if (*s == '\0')
+		return;
 	while ( end > begin)
 	{
 		letter = *end;
