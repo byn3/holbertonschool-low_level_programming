@@ -1,20 +1,21 @@
 #include "holberton.h"
 
 /**
-* _strlen - returns a length of a string
-* @*s: a pointer given by the main function
+* _puts - prints a string with a newline
+* @*str: a pointer given by the main function
 *
 * Description: Uses headers to link and pointers to achieve goal
 * Return: is void. no return.
 */
 
-int _strlen(char *s)
+void _puts(char *str)
 {	
-	int counter = 0;
+	int next= 0;
 
-	while (s[counter] != '\0')
+	while (str[next] != '\0')
 	{
-		counter++;
+		_putchar(str[next]);
+		next++;
 	}
-	return counter;
+	_putchar(10);
 }
