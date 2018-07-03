@@ -2,7 +2,7 @@
 
 /**
 * print_rev - prints a string in reverse
-* @*s: a pointer given by the main function
+* @s: a pointer given by the main function
 *
 * Description: Uses headers to link and pointers to achieve goal
 * Return: is void. no return.

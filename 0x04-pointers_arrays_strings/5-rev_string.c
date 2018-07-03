@@ -1,38 +1,29 @@
 #include "holberton.h"
 
 /**
-* print_rev - prints a string in reverse
-* @*s: a pointer given by the main function
+* rev_string - prints a string in reverse
+* @s: a pointer given by the main function
 *
 * Description: Uses headers to link and pointers to achieve goal
 * Return: is void. no return.
-* I tried a sizeof(s) strat at firest
+* I tried a sizeof(s) strat at first. testing
 */
 
-int _strlen(char *s)
+void rev_string(char *s)
 {
 	int counter = 0;
+	int i = 0;
+	char swap;
 
 	while (s[counter] != '\0')
-        {
 		counter++;
-	}
-	return counter;
-}
-
-void print_rev(char *s)
-{
-	char letter;
-	char *begin = s;
-	char *end = begin + _strlen(s) - 1;
-
-	if (*s == '\0')
-		return;
-	while ( end > begin)
+	counter -= 1;
+	while (counter > i)
 	{
-		letter = *end;
-		*end-- = *begin;
-		*begin++ = letter;
-		_putchar(letter);
+		swap = s[i];
+		s[i] = s[counter];
+		s[counter] = swap;
+		counter--;
+		i++;
 	}
 }
