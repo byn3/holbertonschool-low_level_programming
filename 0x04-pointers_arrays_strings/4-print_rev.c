@@ -9,28 +9,18 @@
 * I tried a sizeof(s) strat at first. testing
 */
 
-int _strlen(char *s)
-{	
+void print_rev(char *s)
+{
 	int counter = 0;
 
 	while (s[counter] != '\0')
-	{
 		counter++;
-	}
-	return counter;
-}
 
-
-void print_rev(char *s)
-{
-	char letter;
-	char *end = begin + _strlen(s) - 1;
-
-	while ( end > begin)
+	while (counter)
 	{
-		letter = *end;
-		*end-- = *begin;
-		*begin++ = letter;
-		_putchar(letter);
+		_putchar(s[counter]);
+		counter--;
 	}
+	_putchar(s[0]);
+	_putchar(10);
 }
