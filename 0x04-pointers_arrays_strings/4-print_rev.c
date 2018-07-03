@@ -6,7 +6,7 @@
 *
 * Description: Uses headers to link and pointers to achieve goal
 * Return: is void. no return.
-* I tried a sizeof(s) strat at firest
+* I tried a sizeof(s) strat at first. testing
 */
 
 int _strlen(char *s)
