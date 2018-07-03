@@ -8,7 +8,7 @@
 * Return: is void. no return.
 * we are guven a string, or a char pointer,
 * we iterate through until the null character
-* we count the number of chars
+* we count the number of chars and return that value to main
 */
 
 int _strlen(char *s)
