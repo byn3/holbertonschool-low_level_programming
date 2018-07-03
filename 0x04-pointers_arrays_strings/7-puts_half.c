@@ -6,6 +6,10 @@
 *
 * Description: Uses headers to link and pointers to achieve goal
 * Return: is void. no return.
+* counts the string length
+* start at halfway in the string till the end
+* which is counter / 2 and counter respectively
+* then we just putchar it
 */
 
 void puts_half(char *str)
