@@ -6,6 +6,10 @@
 *
 * Description: Uses headers to link and pointers to achieve goal
 * Return: is void. no return.
+* this uses the strlen code basically
+* it prints starting from the 0 index and skips every other by
+* using an i += 2 increment
+* then i putchar each i to achieve the goal.
 */
 
 void puts2(char *str)
