@@ -8,6 +8,10 @@
 *
 * Description: Uses headers to link and pointers to achieve goal
 * Return: is void. no return.
+* we were given an array of size 5, but n could be any
+* number, we start at 0 and iterate to n.
+* we print it all. easy question. stop the
+* punctuation when we reach the last index
 */
 
 void print_array(int *a, int n)
