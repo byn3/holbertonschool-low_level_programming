@@ -17,11 +17,11 @@ int _atoi(char *s)
 
 	while (s[counter] != '\0')
 	{
+		if (s[counter] == '-')
+			sign++;
 		if (s[counter] >= 48 && s[counter] <= 57)
 		{
 			i++;
-			if (s[counter] == '-')
-				sign++;
 			result = result * 10 + s[counter] - '0';
 		}
 		if (i > 0 && (s[counter] < 48 || s[counter] > 57))
