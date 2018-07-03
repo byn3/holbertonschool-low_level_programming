@@ -7,6 +7,13 @@
 *
 * Description: Uses headers to link and pointers to achieve goal
 * Return: returns the pointer to dest.
+* we are given a char destination and a source
+* we count how long the string is
+* we loop from 0 to the str length
+* we make the destination be the source
+* essentially its just copying over the array index
+* we return the array dest and main will print it
+* in main, dest is s1 and p is src
 */
 
 char *_strcpy(char *dest, char *src)
