@@ -10,7 +10,7 @@
 
 char *leet(char *s)
 {
-	int i = 0;;
+	int i = 0;
 	int j;
 	int array[10][2] = {{97, 52},
 	{65, 52},
@@ -25,7 +25,7 @@ char *leet(char *s)
 
 	while (s[i] != 0)
 	{
-		for(j = 0 ; j < 10; j++)
+		for (j = 0 ; j < 10; j++)
 		{
 			if (s[i] == array[j][0])
 				s[i] = array[j][1];
