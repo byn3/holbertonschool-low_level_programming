@@ -6,9 +6,9 @@
 *
 * Description: cap all words after a space and period
 * returns the char pointer
-* A: if we have a tab we replace with a space 
+* A: if we have a tab we replace with a space
 * B: if we have a space or period, caps is true
-* 	or if we have a newline, ;, !, ?, ", (, ), {, and }
+*	or if we have a newline, ;, !, ?, ", (, ), {, and }
 * C: if caps is true and we found a lowercase then upper it
 * D: if caps is true but we dont have a lowercase letter then reset to 0
 */
