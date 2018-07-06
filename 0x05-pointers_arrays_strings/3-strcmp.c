@@ -1,23 +1,39 @@
 #include "holberton.h"
 
 /**
-* _strncpy - copies a string like the strncpy function
-* @dest: a pointer given by the main function
-* @src: a pointer given by the main function
-* @n: an int given by main
+* _strcmp - compares two strings
+* @s1: a pointer given by the main function
+* @s2: a pointer given by the main function
 *
 * Description: Uses headers to link and pointers to achieve goal
-* Return: returns the pointer s1 or dest.
+* Return: returns 0 if strings match and no errors
 * I found the answers on the man page
+* A: count how long the first passed in string is
+* B: do the loop only if s1 is not the null character
+*	and if result is zero, meaning no differences
+*	and if we are less than or equal to the length of the string
+* C: if a difference in values is encountered, do the code
+*	so we will get the difference and break
+* D: same as C. dunno why i put D here.
 */
 
-char *_strncpy(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
-	int i;
+	int result = 0;
+	int i = 0;
+	int counter = 0;
 
-	for (i = 0; i < n && src[i] != 0; i++)
-		dest[i] = src[i];
-	for ( ; i < n; i++)
-		dest[i] = 0;
-	return dest;
+	while (s1[counter] != 0)/* A */
+		counter++;
+
+	while (s1 != 0 && result == 0 && i <= counter)/* B */
+	{
+		if (s1 != s2)/* C */
+		{
+			result = s1[i] - s2[i];
+			break;/* D */
+		}
+		i++;
+	}
+	return (result);
 }
