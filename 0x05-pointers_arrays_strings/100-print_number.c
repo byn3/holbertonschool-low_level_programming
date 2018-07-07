@@ -7,6 +7,7 @@
 *
 * Description: making our own atoi function
 * Return: it is void
+* to see comments, visit 0x03-more_functions_nested_loops/101-print_number.c
 */
 
 void print_number(int n)
@@ -20,7 +21,7 @@ void print_number(int n)
 		result = -n;
 		_putchar('-');
 	}
-	if (n == INT_MAX || n == INT_MIN) /* D */
+	if (n == INT_MAX || n == INT_MIN)
 	{
 		while (1)
 		{
