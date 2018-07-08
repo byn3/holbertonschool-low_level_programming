@@ -22,7 +22,7 @@ char *cap_string(char *s)
 	{
 		if (s[i] == '\t')/* A */
 			caps = 1;
-		if (s[i] == '.' || s[i] == ' ' || s[i] == '\n')/* B */
+		else if (s[i] == '.' || s[i] == ' ' || s[i] == '\n')/* B */
 			caps = 1;
 		else if (s[i] == ',' || s[i] == ';' || s[i] == '!')/* B */
 			caps = 1;
