@@ -9,7 +9,8 @@
 * Return: is void
 */
 
-void print_buffer(char *b, int size);
+void print_buffer(char *b, int size)
 {
-
+	b = b;
+	size = size;
 }
