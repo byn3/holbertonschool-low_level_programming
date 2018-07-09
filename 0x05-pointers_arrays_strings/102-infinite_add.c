@@ -64,7 +64,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		tens = sum / 10;/* H */
 		r[k] = sum % 10 + '0';
 	}
-	if ( i >= 0 || j >= 0 || sum > 0)/* J */
+	if (i >= 0 || j >= 0 || sum > 0)/* J */
 		return (0);
 	r[k] = '\0';/* K */
 	k--;
