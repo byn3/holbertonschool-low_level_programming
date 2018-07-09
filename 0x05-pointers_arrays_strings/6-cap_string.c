@@ -16,28 +16,18 @@
 char *cap_string(char *s)
 {
 	int i;
-	int caps = 0;
 
+	if (s[0] >= 'a' && s[0] <= 'z')
+		s[0] -= 32;
 	while (s[i] != 0)
 	{
-		if (s[i] == '\t')/* A */
-			caps = 1;
-		else if (s[i] == '.' || s[i] == ' ' || s[i] == '\n')/* B */
-			caps = 1;
-		else if (s[i] == ',' || s[i] == ';' || s[i] == '!')/* B */
-			caps = 1;
-		else if (s[i] == '?' || s[i] == '"' || s[i] == '(')/* B */
-			caps = 1;
-		else if (s[i] == ')' || s[i] == '{' || s[i] == '}')/* B */
-			caps = 1;
-		if (caps == 1 && s[i] >= 97 && s[i] <= 122)/* D */
+		while (s[i] == '\t' || s[i] == '.' || s[i] == ' ' ||
+s[i] == '\n' || s[i] == ',' || s[i] == ';' || s[i] == '!' || s[i] == '?'
+|| s[i] == '"' || s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
 		{
-			s[i] -= 32;
-			caps = 0;
-		}
-		if (caps == 1 && s[i] >= 65 && s[i] <= 90)/* D */
-		{
-			caps = 0;
+			i++;
+			if (s[i] >= 97 && s[i] <= 122)/* D */
+				s[i] -= 32;
 		}
 		i++;
 	}
