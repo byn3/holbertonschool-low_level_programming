@@ -30,11 +30,13 @@ char *cap_string(char *s)
 			caps = 1;
 		else if (s[i] == ')' || s[i] == '{' || s[i] == '}')/* B */
 			caps = 1;
-		else if (caps == 1 && (s[i] <= 97 || s[i] >= 122))/* C */
-			caps = 0;
 		if (caps == 1 && s[i] >= 97 && s[i] <= 122)/* D */
 		{
 			s[i] -= 32;
+			caps = 0;
+		}
+		if (caps == 1 && s[i] >= 65 && s[i] <= 90)/* D */
+		{
 			caps = 0;
 		}
 		i++;
