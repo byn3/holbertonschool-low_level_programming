@@ -15,7 +15,7 @@
 * D: if the buffer size given is less than the size of i or j
 *	then we want to return 0 which signals main error
 * E: we sum and append the last digit. we will need to swap later
-*	we loop from the last indices and go until size_r -1
+*	we loop from the last indices and go until size_r
 * F: We add up the index of n1[i] and n2[j]
 * G: if i and j are negative we break out of the loop because we have
 *	iterated through all the character arrays and there is nothing left
@@ -31,6 +31,9 @@
 *	iffy with out of bounds array issues and some other stuff
 * J: So if we had k reach the size_r but we still had more i and j indicies
 *	to add then that is an error and we didnt finish so return 0
+* K: k was our buffer size counter. so it is only fitting we had to put the
+*	last char with the k counter as the null char. then we k--
+*	so we can start at the very last index right next tot the null char
 */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
@@ -49,7 +52,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	j--;
 	if (i > size_r || j > size_r)/* D */
 		return (0);
-	for ( ; k < size_r - 1; i--, j--, k++)/* E */
+	for ( ; k < size_r; i--, j--, k++)/* E */
 	{
 		sum = tens;
 		if (i >= 0)/* F */
@@ -57,13 +60,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (j >= 0)
 			sum += n2[j] - '0';
 		if (i < 0 && j < 0 && sum == 0)/* G */
-			break;;
+			break;
 		tens = sum / 10;/* H */
 		r[k] = sum % 10 + '0';
 	}
 	if ( i >= 0 || j >= 0 || sum > 0)/* J */
 		return (0);
-	r[k] = '\0';
+	r[k] = '\0';/* K */
+	k--;
 	for ( ; begin < k; k--, begin++)/* I */
 	{
 		swap = r[k];
