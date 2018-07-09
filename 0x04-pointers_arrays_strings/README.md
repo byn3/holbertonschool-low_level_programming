@@ -24,9 +24,7 @@ At the end of this project you are expected to be able to explain to anyone, wit
 *Computer reserves memory for each variable declared. More or less memory is reserved depending on data type. 1 byte is 8 bits. each bit is 0 or 1. Sizes also depend on the machine, for a 64-bit we have char = 1 byte, int = 4 bytes, float = 4 bytes. A char can hold 2^8 bits which is 256 (-128 to 127 bits which is ASCII baby. Int is 8 bytes or 32 bits so that is 2^32 values which is -2 bil to 2.147 bil. MAPLESTORY MAX MESOS BABY. The space reserved for a variable is the address. Use %p to print addresses or values of pointers with printf. Size of pointers on most 64 bit machines is 8 bytes. A pointer can only point to a variable of the type it was initialized with. Cannot point a char to an int. Dereferencing is manipulating value sstored at the memory address. The * has different meaning depending on the context, arithmetic, declaring, dereferencing pointers. It declares a variable is of type pointer, and it can dereference when used inside code. To refer to array name, 2 ways: sizeof and & operator. Sizeof(array) is size of the object itself so all its components. Address of the first array is the same as the address of the whole array. if a is an array with the address 0x7ffff8f19240, how come a + 1 == 0x7ffff8f19244 and not 0x7ffff8f19241? Because int is 4 bytes.*  
 
 ## Each scripts and their output  
-* Script 0 -  Write a function that takes a pointer to an int as parameter and updates the value it points to to 98.
-
-Prototype: void reset_to_98(int *n);
+* Script 0 -  Write a function that takes a pointer to an int as parameter and updates the value it points to to 98. Prototype: void reset_to_98(int *n);  
 * Script 1 - Write a function that swaps the values of two integers. Prototype: void swap_int(int *a, int *b);  
 * Script 2 - Write a function that returns the length of a string. Prototype: int _strlen(char *s); FYI: The standard library provides a similar function: strlen. Run man strlen to learn more.  
 * Script 3 - Write a function that prints a string, followed by a new line, to stdout. Prototype: void _puts(char *str); FYI: The standard library provides a similar function: puts. Run man puts to learn more.  
@@ -41,17 +39,17 @@ Prototype: void reset_to_98(int *n);
 
 #### Limitation of these projects:  
 ___
--Allowed editors: vi, vim, emacs
--All your files will be compiled on Ubuntu 14.04 LTS
--Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
--All your files should end with a new line
--A README.md file, at the root of the folder of the project is mandatory
--Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
--You are not allowed to use global variables
--No more than 5 functions per file
--You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden
--You are allowed to use _putchar
--You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
--In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
--The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h
--Don’t forget to push your header file
+-Allowed editors: vi, vim, emacs  
+-All your files will be compiled on Ubuntu 14.04 LTS  
+-Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic  
+-All your files should end with a new line  
+-A README.md file, at the root of the folder of the project is mandatory  
+-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl  
+-You are not allowed to use global variables  
+-No more than 5 functions per file  
+-You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden  
+-You are allowed to use _putchar  
+-You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account  
+-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples  
+-The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h  
+-Don’t forget to push your header file  
