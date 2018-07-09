@@ -23,8 +23,9 @@ At the end of this project you are expected to be able to explain to anyone, wit
 **What are header files and how to to use them with #include?** 
 *Header files are files with a .h extension which contain C function declarations and macro definitions. Two types of header files, ones the programmer makes and ones that come with the compiler. By using #include we request to use a header file. Including it is equal to copying the content of the header file. <> is for standard list of directories and "" is for local self made programs.*  
 
+
 ## Each scripts and their output  
-* Script 0 - Write a function that checks for uppercase character. Prototype: int _isupper(int c). Returns 1 if c is uppercase. Returns 0 otherwise. FYI: The standard library provides a similar function: isupper. Run man isupper to learn more.  
+* Script 0 - Write a function that checks for uppercase character. Prototype: int _isupper(int c). Returns 1 if c is uppercase. Returns 0 otherwise. FYI: The standard library provides a similar function: isupper. Run man isupper to learn more.   
 * Script 1 - Write a function that checks for a digit (0 through 9). Prototype: int _isdigit(int c); Returns 1 if c is a digit. Returns 0 otherwise. FYI: The standard library provides a similar function: isdigit. Run man isdigit to learn more.    
 * Script 2 -  Write a function that multiplies two integers. Prototype: int mul(int a, int b);  
 * Script 3 - Write a function that prints the numbers, from 0 to 9, followed by a new line. Prototype: void print_numbers(void); You can only use _putchar twice in your code.  
@@ -37,6 +38,7 @@ At the end of this project you are expected to be able to explain to anyone, wit
 * Script 10 - Write a function that prints a triangle, followed by a new line. Prototype: void print_triangle(int size); You can only use _putchar function to print. Where size is the size of the triangle. If size is 0 or less, the function should print only a new line. Use the character # to print the triangle.   
 * Script 100 - Write a program that finds and prints the largest prime factor of the number 612852475143, followed by a new line. You are allowed to use the standard library. Your program will be compiled with this command: gcc -Wall -pedantic -Werror -Wextra 100-prime_factor.c -o 100-prime_factor -lm  
 * Script 101 - Write a function that prints an integer. Prototype: void print_number(int n); You can only use _putchar function to print. You are not allowed to use long. You are not allowed to use arrays or pointers. You are not allowed to hard-code special values.  
+
 
 #### Limitation of these projects:  
 ___
