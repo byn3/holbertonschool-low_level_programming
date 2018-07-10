@@ -12,5 +12,19 @@
 
 char *_strpbrk(char *s, char *accept)
 {
+	int i;
+	int j;
+	int matches = 0;
 
+	for (i = 0; s[i] != 0; i++)
+	{
+		if (matches != i)
+			break;
+		for (j = 0; s[j] != 0; j++)
+		{
+			if (s[i] == accept[j])
+			matches++;
+		}
+	}
+	return (*(s + matches));
 }
