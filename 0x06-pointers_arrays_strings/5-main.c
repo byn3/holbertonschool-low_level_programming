@@ -12,7 +12,25 @@ int main(void)
     char *f = "world";
     char *t;
 
+char *f1 = "orld";
+char *f2 = "od";
+char *f3 = "z";
+
     t = _strstr(s, f);
+    printf("%s\n", t);
+
+
+    t = _strstr(s, f1);
+    printf("%s\n", t);
+
+
+
+    t = _strstr(s, f2);
+    printf("%s\n", t);
+
+
+
+    t = _strstr(s, f3);
     printf("%s\n", t);
     return (0);
 }
