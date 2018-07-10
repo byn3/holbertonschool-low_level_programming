@@ -13,5 +13,9 @@ int main(void)
 
     f = _strchr(s, 'l');
     printf("%s\n", f);
-    return (0);
+     f = _strchr(s, 'z');
+    printf("%s\n", f);
+ f = _strchr(s, 'o');
+    printf("%s\n", f);
+	return (0);
 }
