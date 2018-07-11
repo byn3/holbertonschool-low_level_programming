@@ -12,7 +12,7 @@
 * B: while the haystack, or i, is not null
 * C: we make start equal to haystack and pattern to needle
 *	we will reset them to these values each loop
-* D: do the while loop if pattern is not null and 
+* D: do the while loop if pattern is not null and
 *	haystack value is equal to pattern
 * E: we exit the loop when pattern is at the null char
 *	or if there was no match. if we had a full match
