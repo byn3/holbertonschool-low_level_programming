@@ -1,31 +1,32 @@
 #include "holberton.h"
-
-/**
-*check_it
-*/
-int check_it(char *s, int i)
-{
-	if (i <= 0)
-		return (1);
-	if (*s == s[i])
-		return check_it(s + 1, i - 1);
-	return (0);
-}
-
+#include <stdio.h>
 /**
 * _strlen_recursion - returns the length of a string
 * @s: a string given by main
 *
 * Description: This will use recursion and no loops
-*	to achieve a goal or mimic a function
+*       to achieve a goal or mimic a function
 * Return: it returns the string length
 */
 
 int _strlen(char *s)
 {
-	if (*s == 0)
+        if (*s == 0)
+                return (0);
+        return (1 + _strlen(s + 1));
+}
+
+
+/**
+*check_it
+*/
+int check_it(char *s, int i, int j)
+{
+	if (i >= j || s[i] == 0)
+		return (1);
+	if (*s != 0 && s[i] != s[j])
 		return (0);
-	return (1 + _strlen(s + 1));
+	return check_it(s, i + 1, j - 1);
 }
 
 
@@ -35,8 +36,11 @@ int _strlen(char *s)
 
 int is_palindrome(char *s)
 {
-	int i = (_strlen(s) - 1) / 2;
-	return check_it(s, i);
+	int j = (_strlen(s));
+
+	if (j == 0 || j == 1)
+		return (1);
+	return check_it(s, 0, j - 1);
 }
 
 
