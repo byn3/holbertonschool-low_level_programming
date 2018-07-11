@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
 * _strlen - returns the length of a string
@@ -55,5 +54,3 @@ int is_palindrome(char *s)
 		return (1);
 	return (check_it(s, 0, j - 1));
 }
-
-
