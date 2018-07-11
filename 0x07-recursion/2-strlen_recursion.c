@@ -6,7 +6,7 @@
 *
 * Description: This will use recursion and no loops
 *	to achieve a goal or mimic a function
-* Return: none it is void.
+* Return: it returns the string length
 */
 
 int _strlen_recursion(char *s)
