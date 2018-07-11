@@ -27,5 +27,8 @@ int main(void)
     printf("%d   NO PASSES: this shall not pass\n", r);
     r = is_palindrome("step on no pets");
     printf("%d   PASSES: poppy referece? dont pass\n", r);
+	
+    r = is_palindrome("step s");
+    printf("%d   NO PASSES: cause you had a basic af s[i] == s[j] check\n", r);
     return (0);
 }
