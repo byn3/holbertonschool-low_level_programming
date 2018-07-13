@@ -10,20 +10,34 @@
 *
 * Description: using arc and argv to achieve the intended function
 * Return: returns 0 if it works or something else if error
+* A: if argc does not have only 2 arguments or if the 
+*	second argument is not a digit
+* B: turn the whole number into an int, then subtract
+*	25, 10, 5, 2, and 1. till no more. increase counter and return it
+* C: checks if any non digits in the string.
 */
 
 int main(int argc, char **argv)
 {
 	int number = 0;
 	int count = 0;
+	int j = 0;
 
-	if (argc != 2 || !isdigit(*argv[1]))
+	if (argc != 2)/* A */
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	number = atoi(argv[1]);
+	while (argv[1][j])/* C */
+	{
+		if (!isdigit(argv[1][j]))
+		{
+			printf("Error\n");
+			return (1);
+		}
+		j++;
+	}
+	number = atoi(argv[1]);/* B */
 	while (number > 0)
 	{
 		while (number >= 25)
