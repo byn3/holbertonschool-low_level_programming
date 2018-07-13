@@ -4,11 +4,11 @@
 #include <ctype.h>
 
 /**
-* main - multiplies two numbers
+* main - adds numbers. checks if number
 * @argc: number of arguments
 * @argv: the vector that hold the arguments
 *
-* Description: using arc and argv to achieve the indended function
+* Description: using arc and argv to achieve the intended function
 * Return: returns 0 if it works or something else if error
 */
 
