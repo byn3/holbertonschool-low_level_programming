@@ -15,34 +15,13 @@
 int main(int argc, char **argv)
 {
 	int product;
-	int i = 0;
 
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	while (argv[1][i])
-	{
-		i = 0;
-		if (!isdigit(argv[1][i]) && argv[1][i] != '-')
-		{
-			printf("Error\n");
-			return (1);
-		}
-		i++;
-	}
-	i = 0;
-	while (argv[2][i])
-	{
-		if (!isdigit(argv[2][i]) && argv[2][i] != '-')
-		{
-			printf("Error\n");
-			return (1);
-		}
-		i++;
-	}
-	product = (atoi(argv[1]) * atoi(argv[2]));
-	printf("%i\n", product);
+	product = atoi(argv[1]) * atoi(argv[2]);
+	printf("%d\n", product);
 	return (0);
 }
