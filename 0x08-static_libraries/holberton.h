@@ -1,6 +1,6 @@
 #ifdef HOLBERTON_H
 #define HOLBERTON_H
-
+#define NULL 0
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
