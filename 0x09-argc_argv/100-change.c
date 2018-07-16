@@ -19,7 +19,7 @@
 
 int main(int argc, char **argv)
 {
-	int number = atoi(argv[1]);
+	int number;
 	int count = 0;
 
 	if (argc != 2)/* A */
@@ -27,6 +27,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
+	number = atoi(argv[1]);
 	while (number > 0)
 	{
 		while (number >= 25)
@@ -55,6 +56,6 @@ int main(int argc, char **argv)
 			count++;
 		}
 	}
-	printf("%i\n", count);
+	printf("%d\n", count);
 	return (0);
 }
