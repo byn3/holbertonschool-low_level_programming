@@ -21,6 +21,7 @@
 * F: loop through each index now and insert a 0
 * G: return the pointer
 * I deleted stuff my comments are screwed i changed stuff also
+* D again: I check if height and width can overflow both.
 */
 
 int **alloc_grid(int width, int height)
@@ -31,10 +32,13 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)/* A */
 		return (NULL);
 	pointer = malloc(height * sizeof(int *));/* D */
+		if (pointer == NULL)
+			return (NULL);
+	pointer = malloc(width * sizeof(int *));
+		if (pointer == NULL)
+			return (NULL);
 	for (i = 0; i < height; i++)/* E */
 		pointer[i] = malloc(width * sizeof(int));
-	if (pointer == NULL)
-		return (NULL);
 	for (i = 0; i < height; i++)/* F */
 		for (j = 0; j < width; j++)
 			pointer[i][j] = 0;
