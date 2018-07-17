@@ -35,8 +35,8 @@ int **alloc_grid(int width, int height)
 	if (width > INT_MAX || height > INT_MAX)
 		return (NULL);
 	pointer = malloc(height * sizeof(int *));/* D */
-	for (i = 0; i < width; i++)/* E */
-		pointer[i] = malloc(width * sizeof(int));
+	for (i = 0; i < height; i++)/* E */
+		pointer[i] = malloc(width * sizeof(int *));
 	if (pointer == NULL)
 	{
 		free(pointer);
