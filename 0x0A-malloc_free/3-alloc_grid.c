@@ -23,6 +23,8 @@
 * G: return the pointer
 * I deleted stuff my comments are screwed i changed stuff also
 * D again: I check if height and width can overflow both.
+* TLDR: GOTTA FREE UP STARTING FROM THE ROWS, GOING BACKWARDS
+*	and then finally free up the initial pointer you malloced
 */
 
 int **alloc_grid(int width, int height)
