@@ -3,7 +3,7 @@
 
 /**
 * str_concat - a function that concatenates two strings
-* @s1: the first string main gives us 
+* @s1: the first string main gives us
 * @s2: the second string main gives us
 *
 * Description: the returned memory allocation has
