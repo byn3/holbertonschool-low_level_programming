@@ -20,25 +20,21 @@
 *	now we willed those v arrays with ints
 * F: loop through each index now and insert a 0
 * G: return the pointer
+* I deleted stuff my comments are screwed i changed stuff also
 */
 
 int **alloc_grid(int width, int height)
 {
 	int **pointer;
-	int *test;
 	int i, j;
 
 	if (width <= 0 || height <= 0)/* A */
 		return (NULL);
-	test = malloc((sizeof(int) * width * height));/* B */
-	if (test == NULL)
-		return (NULL);
-	free(test);/* C */
 	pointer = malloc(height * sizeof(int *));/* D */
-	for (i = 0; i < width; i++)/* E */
-	{
+	for (i = 0; i < height; i++)/* E */
 		pointer[i] = malloc(width * sizeof(int));
-	}
+	if (pointer == NULL)
+		return (NULL);
 	for (i = 0; i < height; i++)/* F */
 		for (j = 0; j < width; j++)
 			pointer[i][j] = 0;
