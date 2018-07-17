@@ -9,6 +9,17 @@
 * Description: make a width by height grid and then each index should be 0
 * Return: the pointer or null if failure
 * A: test cases if we get a 0 or negative size. return NULL
+* B: we test if the input is too much so we will return null
+* C: we need to free the test memory. dont want valgrind on us
+* D: we now habve our pointer to pointer, be the size of an int pointer
+*	multiplied by our height which is how many y- long stuff we want
+* E: loop from i to the width or x-long, we will assign
+*	the pointer at the int pointer index with another malloc
+*	but now that size is not an int pointer but a just an int
+*	so we had a straight line vertically down with arrays
+*	now we willed those v arrays with ints
+* F: loop through each index now and insert a 0
+* G: return the pointer
 */
 
 int **alloc_grid(int width, int height)
@@ -26,7 +37,7 @@ int **alloc_grid(int width, int height)
 	pointer = malloc(height * sizeof(int *));/* D */
 	for (i = 0; i < width; i++)/* E */
 	{
-		pointer[i] = malloc(width * sizeof(int *));
+		pointer[i] = malloc(width * sizeof(int));
 	}
 	for (i = 0; i < height; i++)/* F */
 		for (j = 0; j < width; j++)
