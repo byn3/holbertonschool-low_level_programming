@@ -34,7 +34,7 @@ char *argstostr(int ac, char **av)
 	int total = 0;
 	char *pointer;
 
-	if (ac <= 0 || av == NULL)/* A */
+	if (ac == 0 || av == NULL)/* A */
 		return (NULL);
 	for (i = 0; i < ac; i++)/* B */
 		for (j = 0; av[i][j]; j++)
