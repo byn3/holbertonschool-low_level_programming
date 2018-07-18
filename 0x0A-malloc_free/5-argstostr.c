@@ -42,7 +42,7 @@ char *argstostr(int ac, char **av)
 	pointer = malloc(sizeof(char *) * (total + ac + 1));/* C */
 	if (pointer == NULL)/* D */
 	{
-		free (pointer);
+		free(pointer);
 		return (NULL);
 	}
 	for (i = 0; i < ac; i++)/* E */
@@ -59,4 +59,4 @@ char *argstostr(int ac, char **av)
 	}
 	pointer[k] = '\0';/* H */
 	return (pointer);
-}	
+}
