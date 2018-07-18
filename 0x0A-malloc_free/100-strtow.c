@@ -38,6 +38,10 @@ char **strtow(char *str)
 	}
 	for (i = 0, a = 0; str[i]; i++)
 	{
+		if (str[i] == ' ')
+			stringLength = 0;
+		if (str[i] != ' ')
+			stringLength++;
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
 			pointer[a] = malloc(sizeof(char) * stringLength);
@@ -50,12 +54,8 @@ char **strtow(char *str)
 			}
 			a++;
 		}
-		if (str[i] == ' ')
-			stringLength = 0;
-		if (str[i] != ' ')
-			stringLength++;
+
 	}
-	pointer[a] = malloc(sizeof(char));
 	for (i = 0, a = 0, b = 0; str[i]; i++)
 	{
 		if (str[i] != ' ' && str[i] != '\0' &&
