@@ -55,6 +55,7 @@ char **strtow(char *str)
 		if (str[i] != ' ')
 			stringLength++;
 	}
+	pointer[a] = malloc(sizeof(char));
 	for (i = 0, a = 0, b = 0; str[i]; i++)
 	{
 		if (str[i] != ' ' && str[i] != '\0' &&
@@ -73,6 +74,6 @@ char **strtow(char *str)
 			b++;
 		}
 	}
-	pointer[wordCount] = '\0';
+	pointer[wordCount] = NULL;
 	return (pointer);
 }
