@@ -30,7 +30,7 @@ char **strtow(char *str)
 	}
 	if (wordCount == 0)
 		return (NULL);
-	pointer = malloc(sizeof(char *) * wordCount + 1);
+	pointer = malloc(sizeof(char *) * (wordCount + 1));
 	if (pointer == NULL)
 	{
 		free(pointer);
