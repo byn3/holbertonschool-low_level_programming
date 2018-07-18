@@ -44,7 +44,7 @@ char **strtow(char *str)
 			stringLength++;
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
-			pointer[a] = malloc(sizeof(char) * stringLength);
+			pointer[a] = malloc(sizeof(char) * stringLength + 1);
 			if (pointer[a] == NULL)
 			{
 				for ( ; a >= 0; a--)
