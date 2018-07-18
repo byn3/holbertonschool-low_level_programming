@@ -37,8 +37,10 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)/* A */
 		return (NULL);
 	for (i = 0; i < ac; i++)/* B */
+	{
 		for (j = 0; av[i][j]; j++)
 			total++;
+	}
 	pointer = (char *) malloc(sizeof(char *) * (total + ac + 1));/* C */
 	if (pointer == NULL)/* D */
 	{
@@ -49,8 +51,7 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; av[i][j]; j++, k++)/* F */
 			pointer[k] = av[i][j];
-		pointer[k] = '\n';/* G */
-		k++;
+		pointer[k++] = '\n';/* G */
 	}
 	pointer[k] = '\0';/* H */
 	return (pointer);
