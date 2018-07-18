@@ -48,7 +48,6 @@ char **strtow(char *str)
 					free(pointer);
 					return (NULL);
 				}
-					
 			a++;
 		}
 		if (str[i] == ' ')
@@ -65,11 +64,8 @@ char **strtow(char *str)
 			pointer[a][b] = str[i];
 			b++;
 			pointer[a][b] = '\0';
-			if (a < wordCount - 1)
-			{
-				a++;
-				b = 0;
-			}
+			a++;
+			b = 0;
 		}
 		else if (str[i] != ' ' && str[i] != '\0')
 		{
