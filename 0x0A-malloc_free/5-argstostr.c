@@ -47,15 +47,10 @@ char *argstostr(int ac, char **av)
 	}
 	for (i = 0; i < ac; i++)/* E */
 	{
-		j = 0;
-		while (av[i][j])/* F */
-		{
+		for(j = 0; av[i][j]; j++, k++)/* F */
 			pointer[k] = av[i][j];
-			k++;
-			j++;
-		}
-			pointer[k] = '\n';/* G */
-			k++;
+		pointer[k] = '\n';/* G */
+		k++;
 	}
 	pointer[k] = '\0';/* H */
 	return (pointer);
