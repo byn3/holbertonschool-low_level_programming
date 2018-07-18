@@ -28,7 +28,6 @@ char **strtow(char *str)
 		if (str[i] != ' ' && str[i + 1] == '\0')
 			wordCount++;
 	}
-	printf("WORDCOUNT %d:\n", wordCount);
 	if (wordCount == 0)
 		return (NULL);
 	pointer = malloc(sizeof(char *) * wordCount + 2);
@@ -75,7 +74,5 @@ char **strtow(char *str)
 		}
 	}
 	pointer[wordCount] = '\0';
-//	for (i = 0; i < wordCount; i++)
-//		printf("%s\n", pointer[i]);
 	return (pointer);
 }
