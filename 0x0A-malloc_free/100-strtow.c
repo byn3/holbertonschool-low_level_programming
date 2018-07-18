@@ -19,6 +19,8 @@ char **strtow(char *str)
 	int a = 0;
 	int b = 0;
 
+	if (str == 0)
+		return (NULL);
 	for (i = 0; str[i]; i++)
 	{
 		if (str[i] != ' ' && str[i + 1] == ' ')
