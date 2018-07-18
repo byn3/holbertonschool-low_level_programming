@@ -40,7 +40,7 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
-			pointer[a] = malloc(sizeof(char) * stringLength + 1);
+			pointer[a] = malloc(sizeof(char) * stringLength);
 			a++;
 		}
 		if (str[i] == ' ')
