@@ -5,7 +5,7 @@
 *
 */
 
-void copyit(int *ptr, int *pointer, int old_size)
+void copyit(char *ptr, char *pointer, int old_size)
 {
 	if (old_size)
 	{
