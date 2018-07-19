@@ -18,11 +18,11 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i = 0;
-	char *pointer;
+	int *pointer;
 
 	if (size <= 0 || nmemb <= 0)
 		return (NULL);
-	pointer = malloc(nmemb * (size));
+	pointer = malloc(nmemb * size);
 	if (pointer == NULL)
 		return (NULL);
 	for (i = 0; i < nmemb; i++)
