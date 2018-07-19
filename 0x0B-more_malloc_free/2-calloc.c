@@ -27,9 +27,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *pointer;
 	int product;
-
+	
 	product = nmemb * size;
-	if (size <= 0 || nmemb <= 0)
+	if (size <= 0 || nmemb <= 0 ||
+	size > INT_MAX || nmemb > INT_MAX)
 		return (NULL);
 	pointer = malloc(product);
 	if (pointer == NULL)
