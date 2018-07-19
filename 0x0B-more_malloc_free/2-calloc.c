@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <limits.h>
 
 /**
 * _calloc - a function that allocates memory for an array using malloc
@@ -12,9 +13,19 @@
 * Return: a pointer or null if errors
 */
 
+void makeitzero(char *pointer, int product)
+{
+	if (product)
+	{
+		*pointer = 0;
+		makeitzero(pointer + 1, product - 1);
+	}
+	return;
+}
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *pointer;
+	void *pointer;
 	int product;
 
 	product = nmemb * size;
@@ -23,5 +34,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	pointer = malloc(product);
 	if (pointer == NULL)
 		return (NULL);
-	return ((void*)pointer);
+	makeitzero(pointer, product);
+	return (pointer);
 }
