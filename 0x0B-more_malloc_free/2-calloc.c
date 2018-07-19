@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#define INT_MAX 2147483647
 
 /**
 * _calloc - a function that allocates memory for an array using malloc
@@ -29,8 +28,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	int product;
 	
 	product = nmemb * size;
-	if (size <= 0 || nmemb <= 0 ||
-	size > INT_MAX || nmemb > INT_MAX)
+	if (size <= 0 || nmemb <= 0)
 		return (NULL);
 	pointer = malloc(product);
 	if (pointer == NULL)
