@@ -2,7 +2,13 @@
 #include <stdlib.h>
 
 /**
+* copyit- a helper function that copies over a string
+* @ptr: a pointer. the original og array
+* @pointer: the new pointer we want
+* @old_size: the size of the old stuff cause we want to copy that
 *
+* Description: copies the old pointer into the new pointer
+* Return: nothing it is void.
 */
 
 void copyit(char *ptr, char *pointer, int old_size)
@@ -29,7 +35,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	void *pointer;
 
 	if (old_size == new_size)
-		return ptr;
+		return (ptr);
+	if (new_size == 0 && ptr != NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
 	if (ptr == NULL)
 	{
 		free(ptr);
@@ -39,11 +50,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		pointer = malloc(new_size);
 	if (pointer == NULL)
 		return (NULL);
-	if (new_size == 0 && ptr != NULL)
-	{
-		free(ptr);
-		return (NULL);
-	}
 	if (new_size > old_size)
 	{
 		copyit(ptr, pointer, old_size);
