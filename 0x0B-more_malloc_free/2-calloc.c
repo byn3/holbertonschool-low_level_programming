@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <limits.h>
+#define INT_MAX 2147483647
 
 /**
 * _calloc - a function that allocates memory for an array using malloc
