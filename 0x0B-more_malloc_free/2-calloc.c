@@ -12,19 +12,9 @@
 * Return: a pointer or null if errors
 */
 
-/*
-void makeitzero(void *pointer, int total)
-{
-	while (total)
-	{
-	
-	}
-}
-*/
-
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *pointer;
+	char *pointer;
 	int product;
 
 	product = nmemb * size;
@@ -33,6 +23,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	pointer = malloc(product);
 	if (pointer == NULL)
 		return (NULL);
-	//makeitzero(&pointer, total);
-	return ((void *)pointer);
+	return ((void*)pointer);
 }
