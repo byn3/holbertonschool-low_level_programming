@@ -14,11 +14,10 @@
 
 void makeitzero(char *pointer, int product)
 {
-	if (product)
-	{
-		*pointer = 0;
-		makeitzero(pointer + 1, product - 1);
-	}
+	int i = 0;
+
+	for (i = 0; i < product; i++)
+		pointer[i] = 0;
 	return;
 }
 
