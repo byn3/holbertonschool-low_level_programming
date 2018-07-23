@@ -23,7 +23,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (0);
 	while (name[i])
 		i++;
-	decoy1 = malloc(i * sizeof(char));
+	decoy1 = malloc(i * sizeof(char) + 1);
 	if (!decoy1)
 	{
 		free(new_doggy);
@@ -36,7 +36,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	i = 0;
 	while (owner[i])
 		i++;
-	decoy2 = malloc(i * sizeof(char));
+	decoy2 = malloc(i * sizeof(char) + 1);
 	if (!decoy2)
 	{
 		free(new_doggy);
