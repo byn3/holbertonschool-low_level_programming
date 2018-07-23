@@ -13,7 +13,7 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i;
+	int i = 0;
 	struct dog_t *new_doggy;
 	char *decoy1;
 	char *decoy2;
@@ -21,7 +21,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_doggy = malloc(sizeof(struct dog_t));
 	if (!new_doggy)
 		return (0);
-	decoy1 = malloc(sizeof(name));
+	while (name[i])
+		i++;
+	decoy1 = malloc(i * sizeof(char));
 	if (!decoy1)
 	{
 		free(new_doggy);
@@ -31,7 +33,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (i = 0; name[i]; i++)
 		decoy1[i] = name[i];
 	decoy1[i] = '\0';
-	decoy2 = malloc(sizeof(owner));
+	i = 0;
+	while (owner[i])
+		i++;
+	decoy2 = malloc(i * sizeof(char));
 	if (!decoy2)
 	{
 		free(new_doggy);
