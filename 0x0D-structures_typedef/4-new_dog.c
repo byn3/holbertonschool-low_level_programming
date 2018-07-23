@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 
 /**
 * new_dog - a pointer that we will return to dog_t
