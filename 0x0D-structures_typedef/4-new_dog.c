@@ -16,14 +16,51 @@ dog_t *new_dog(char *name, float age, char *owner)
 	struct dog_t *new_doggy;
 	char *decoy1;
 	char *decoy2;
+	int length1 = 0;
+	int length2 = 0;
 
-	new_doggy = malloc(sizeof(struct dog_t));
-	if (!new_doggy)
-		return (0);
-	decoy1 = name;
-	decoy2 = owner;
-	new_doggy->name = decoy1;
-	new_doggy->age = age;
-	new_doggy->owner = decoy2;
+	if (name == NULL)
+	{
+		free(new_doggy);
+		return (NULL);
+	}
+	for (length1 = 0; name[length1]; length1++)
+		;
+	decoy1 = malloc(length1 * sizeof(char) + 1);
+	if (decoy1 == NULL)
+		return (NULL);
+	new_doggy = malloc(sizeof(decoy1));
+	if (new_doggy == NULL)
+	{
+		free(decoy1);
+		return (NULL);
+	}
+	new_doggy = malloc(sizeof(float));
+	if (new_doggy == NULL)
+	{
+		free(decoy1);
+		return (NULL);
+	}
+	if (owner == NULL)
+	{
+		free(decoy1);
+		free(new_doggy);
+		return (NULL);
+	}
+	for (length2 = 0; owner[length2]; length2++)
+		;
+	decoy2 = malloc (length2 * sizeof(char) + 1);
+	if (decoy2 == NULL)
+	{
+		return (NULL);
+	}
+	new_doggy = malloc(sizeof(decoy2));
+
+
 	return (new_doggy);
 }
+
+for name and owner
+count length. malloc lenth
+string copy
+free.
