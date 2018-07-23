@@ -1,6 +1,4 @@
 #include "dog.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
 * new_dog - a pointer that we will return to dog_t
@@ -18,7 +16,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	new_doggy = malloc(sizeof(struct dog_t));
 	if (!new_doggy)
-		return (NULL);
+		return (0);
 	new_doggy->name = name;
 	new_doggy->age = age;
 	new_doggy->owner = owner;
