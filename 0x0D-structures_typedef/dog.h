@@ -14,6 +14,20 @@ struct dog
 	float age;
 	char *owner;
 };
+/**
+* struct dog_t - a new dog structure
+* @name: obviously the doge nombre. perro
+* @age: cuanto anos tienen.
+* @owner: dueno de sclavos, dominar.
+*
+* Description: attributes of a doggo
+*/
+typedef struct dog_t
+{
+	char *name;
+	float age;
+	char *owner;
+} dog_t;
 void print_dog(struct dog *d);
 void init_dog(struct dog *d, char *name, float age, char *owner);
 #endif
