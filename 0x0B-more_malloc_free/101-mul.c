@@ -11,56 +11,62 @@
 * Return: print the result. return 0 if success
 */
 
+# IF EITHER NUMBER ARE ZERO RETURN 0;
+##SHOULD CHECK IF BEGINNING LEADING NUMBER IS ZERO. 
+
+
 int main(int argc, char **argv)
 {
-	char error[] = "Error";
-	int i = 0;
-	char *loop;
-	char *sumarray;
-	int tens = 0;
-	int sum = 0;
-	int swap = 0;
-	int begin = 0;
-	int k = 0;
+	int size1 = 0;
+	int size2 = 0;
+	int product_size = 0;
+	int product = 0;
+	int overflow = 0;
+	int index = 0;
+	int tab = 0;
 
-	loop = malloc(sizeof(argv[2]));
-	if (loop == NULL)
-		return (0);
-	sumarray = malloc(sizeof(argv[2]) * sizeof(argv[1]) + 1);
-	if (sumarray == NULL)
-		return (0);
-	if (argc != 3)
+	while (argv[1][size1])//strlength and checks if digit
 	{
-		while (error[i])
-			_putchar(error[i]);
-		exit(98);
+		ISDIGIT\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\##################
+		size1++;
 	}
-	if (argv[1] == 0 || argv[2] == 0)
+	while (argv[2][size2])//strlength and checks if digit
 	{
-		_putchar('0');
-		return (0);
+		ISITADIGIT########################################################
+		size2++;
 	}
-	while (loop[i] != *argv[2])
+	product_size = size1 + size2 + 1;//calculate the range we need
+	product = malloc(sizeof(char) * product_size);//allocates space
+	if (!product)
+		return (98);
+	while (product_size >= 0)//initialize all to 0
+		product[product_size] = '0';
+	size1--;//because length is 1 more than index
+	size2--;
+	while (size2 >= 0)
 	{
-		for (i = 0; argv[i]; i++, k++)/* E */
+		index = tab;
+		for (j = size1; j >= 0; j--)
 		{
-			sum = tens;
-			sum += argv[1][i] - '0';
-			tens = sum / 10;/* H */
-			sumarray[k] = sum % 10 + '0';
+			product = (argv[1][j]-'0') * (argv[2][size2]-'0');
+			product += product[index] -'0';
+			product += overflow;
+			overflow = product / 10;
+			product[index] = product % 10 + '0';
+			index++;
 		}
-		i++;
+		if (overflow)
+		{
+			product[index] = overflow;
+			index++;
+		}
+		overflow = 0;
+		size2--;
+		tab++;
 	}
-	sumarray[k] = '\0';
-	k--;
-	for ( ; begin < k; k--, begin++)
-	{
-		swap = sumarray[k];
-		sumarray[k] = sumarray[begin];
-		sumarray[begin] = swap;
-	}
-	for (i = 0; sumarray[i]; i++)
-		_putchar(sumarray[i]);
-	free(loop);
+	product[index] ='\0';
+	reversestring\\\\\###########################################################
+	printf("%s\n", product);
+	free(product);
 	return (0);
 }
