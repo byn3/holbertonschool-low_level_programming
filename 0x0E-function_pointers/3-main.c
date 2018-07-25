@@ -16,6 +16,7 @@ int main(int argc, char **argv)
 {
 	int a;
 	int b;
+	int calculated;
 
 	if (argc != 4)
 	{
@@ -34,8 +35,10 @@ int main(int argc, char **argv)
 
 	if (*argv[2] == '+' || *argv[2] == '-' || *argv[2] == '*' ||
 		*argv[2] == '/' || *argv[2] == '%')
-	{	
-		printf("%d\n", get_op_func(argv[2])(a, b));
+	{
+		calculated = get_op_func(argv[2])(a, b);
+		printf("%d\n", calculated);
+		return (0);
 	}
 
 	printf("Error\n");

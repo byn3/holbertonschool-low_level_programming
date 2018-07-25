@@ -2,11 +2,10 @@
 #include <stdio.h>
 
 /**
-* get_op_function - will get the char operand
+* get_op_func - will get the char operand
 * @s: a character or operand
-* @int: two ints passed
 * Description: I am the hotline bling
-* Eeturn: an int and does the function.
+* Return: an int and does the function.
 */
 
 int (*get_op_func(char *s))(int, int)
@@ -20,11 +19,12 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
+
 	while (i < sizeof(ops) / sizeof(op_t))
 	{
-		if (s == ops[i].op)
+		if (*ops[i].op == *s)
 			return (ops[i].f);
-	i++;
+		i++;
 	}
-	return (ops->f);;
+	return (0);
 }
