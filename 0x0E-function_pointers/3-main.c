@@ -17,9 +17,8 @@ int main(int argc, char **argv)
 	int a;
 	int b;
 	int calculated;
-	int operator_length = 0;
 
-	if (argv[2][1] != NULL)
+	if (argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
