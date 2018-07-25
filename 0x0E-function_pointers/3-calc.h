@@ -1,5 +1,5 @@
-#ifndef OMGTHISPROBLEM
-#define OMGTHISPROBLEM
+#ifndef GRINDDONTSTOPWORKDONTSTOP
+#define GRINDDONTSTOPWORKDONTSTOP
 
 /**
  * struct op - Struct op
