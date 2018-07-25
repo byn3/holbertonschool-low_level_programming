@@ -19,14 +19,10 @@ int main(int argc, char **argv)
 	int calculated;
 	int operator_length = 0;
 
-	while (argv[2][operator_length])
+	if (argv[2][1] != NULL)
 	{
-		operator_length++;
-		if (operator_length > 1)
-		{
-			printf("Error\n");
-			exit(99);
-		}
+		printf("Error\n");
+		exit(99);
 	}
 	if (argc != 4)
 	{
