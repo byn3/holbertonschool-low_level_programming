@@ -33,14 +33,15 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
+	if (argv[2][1] != '\0')
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
 	if (*argv[2] == '+' || *argv[2] == '-' || *argv[2] == '*' ||
 		*argv[2] == '/' || *argv[2] == '%')
 	{
-		if (argv[2][1] != '\0')
-		{
-			printf("Error\n");
-			exit(99);
-		}
 		calculated = get_op_func(argv[2])(a, b);
 		printf("%d\n", calculated);
 		return (0);
