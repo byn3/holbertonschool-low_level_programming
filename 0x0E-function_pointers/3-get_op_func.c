@@ -20,7 +20,7 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
-	
+
 	while (i < sizeof(ops) / sizeof(op_t))
 	{
 		if (*ops[i].op == *s)
