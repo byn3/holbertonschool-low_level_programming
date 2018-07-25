@@ -17,7 +17,17 @@ int main(int argc, char **argv)
 	int a;
 	int b;
 	int calculated;
+	int operator_length = 0;
 
+	while (argv[2][operator_length])
+	{
+		operator_length++;
+		if (operator_length > 1)
+		{
+			printf("Error\n");
+			exit(99);
+		}
+	}
 	if (argc != 4)
 	{
 		printf("Error\n");
