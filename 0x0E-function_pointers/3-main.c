@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 	
-	if (argv[][] != NULL)
+	if (argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
