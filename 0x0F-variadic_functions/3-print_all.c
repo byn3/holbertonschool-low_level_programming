@@ -29,7 +29,7 @@ void print_all(const char * const format, ...)
 				flag = 1;
 				break;
 			case 'f':
-				printf("%f", (float) va_arg(santa, double));;
+				printf("%f", (float) va_arg(santa, double));
 				flag = 1;
 				break;
 			case 's':
