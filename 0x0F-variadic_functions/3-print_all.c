@@ -16,10 +16,12 @@ void print_all(const char * const format, ...)
 	int flag = 0;
 
 	va_start(santa, format);
-	while (format[i])
+	if (format && format[i])
 	{
-		switch (format[i])
+		while (format[i])
 		{
+			switch (format[i])
+			{
 			case 'c':
 				printf("%c", (char)  va_arg(santa, int));
 				flag = 1;
@@ -43,11 +45,12 @@ void print_all(const char * const format, ...)
 				printf("%s", s);
 				flag = 1;
 				break;
+			}
+			if (format[i + 1] != 0 && flag == 1)
+				printf(", ");
+			i++;
+			flag = 0;
 		}
-		if (format[i + 1] != 0 && flag == 1)
-			printf(", ");
-		i++;
-		flag = 0;
 	}
 	va_end(santa);
 	printf("\n");
