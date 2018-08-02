@@ -1,7 +1,5 @@
 #include "lists.h"
 
-list_t *list_t(char *str, unsigned int len, struct list_s *next);
-
 /**
 * print_list - a function that prints a linked list
 * @h: the list given to us from the main
@@ -17,10 +15,13 @@ size_t print_list(const list_t *h)
 	while (h)
 	{
 		if (!(h->str))
-			printf("[0] (nil)");
+			printf("[0] (nil)\n");
 		else
-			printf("%s", h->str);
-		h = h->next
+		{
+			printf("[%d] ", h->len);
+			printf("%s\n", h->str);
+		}
+		h = h->next;
 		count++;
 	}
 	return (count);
