@@ -1,4 +1,15 @@
 #include "holberton.h"
+#include <stdio.h>
+
+/**
+*
+*/
+int printit(char c)
+{
+	if (c > 8)
+		return (1);
+	return (0);
+}
 
 /**
 * print_buffer - a function that prints a buffer
@@ -11,6 +22,43 @@
 
 void print_buffer(char *b, int size)
 {
-	b = b;
-	size = size;
+	int s1 = size;
+	int s2 = size;
+	char *ptr1 = b;
+	char *ptr2 = b;
+	int i = 0;
+	int j = 0;
+
+	while (size > 0)
+	{
+		size -= 10;
+		printf("%08x: ", 10 * i);
+
+		for (i = 0; i < 5; i++)
+		{
+			for (j = 0; j < 2; j++)
+			{
+				if (s1 > 0)
+				{
+					printf("%02x", *ptr1);
+					s1--;
+					ptr1++;
+				}
+			}
+			putchar(' ');
+		}
+		for (i = 0; i < 10; i++)
+		{
+			if (s2 > 0)
+			{
+				if (printit(*ptr2))
+					printf("%c", *ptr2);
+				else
+					putchar('.');
+				s2--;
+				ptr2++;
+			}
+		}
+	printf("\n");
+	}
 }
