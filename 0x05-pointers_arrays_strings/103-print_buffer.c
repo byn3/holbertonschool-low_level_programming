@@ -2,7 +2,11 @@
 #include <stdio.h>
 
 /**
+* printit - a helper function
+* @c: a character to see fi it is printable
 *
+* Description: checks the character
+* Return: a 1 or 0 for true or false
 */
 int printit(char c)
 {
