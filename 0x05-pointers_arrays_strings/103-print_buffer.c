@@ -34,6 +34,8 @@ void print_buffer(char *b, int size)
 	int j = 0;
 	int k = 0;
 
+	if (size <= 0)
+		printf("\n");
 	while (size > 0)
 	{
 		size -= 10;
