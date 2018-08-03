@@ -6,9 +6,9 @@
 */
 int printit(char c)
 {
-	if (c > 8)
-		return (1);
-	return (0);
+	if ((c < 32 && c >= 0) || c > 126)
+		return (0);
+	return (1);
 }
 
 /**
@@ -28,16 +28,19 @@ void print_buffer(char *b, int size)
 	char *ptr2 = b;
 	int i = 0;
 	int j = 0;
+	int k = 0;
 
 	while (size > 0)
 	{
 		size -= 10;
-		printf("%08x: ", 10 * i);
-
+		printf("%08x: ", 10 * k);
+		k++;
 		for (i = 0; i < 5; i++)
 		{
 			for (j = 0; j < 2; j++)
 			{
+				if (s1 == 0)
+					printf("  ");
 				if (s1 > 0)
 				{
 					printf("%02x", *ptr1);
@@ -45,7 +48,7 @@ void print_buffer(char *b, int size)
 					ptr1++;
 				}
 			}
-			putchar(' ');
+				putchar(' ');
 		}
 		for (i = 0; i < 10; i++)
 		{
