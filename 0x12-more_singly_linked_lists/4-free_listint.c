@@ -13,7 +13,7 @@ void free_listint(listint_t *head)
 	listint_t *freeME;
 
 	if (!head)
-		exit(98);
+		return;
 	while (head)
 	{
 		freeME = head;
