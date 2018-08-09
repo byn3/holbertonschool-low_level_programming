@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
+
 /**
 * get_bit - returns the value of a bit a a given index
 * @n: the number we want to check
@@ -25,7 +26,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		count++;
 		count2++;
 	}
-	if (index > count2)
+	if (index >= count2)
 		return (-1);
 	for (count -= 1; count >= 0; count--)
 	{
