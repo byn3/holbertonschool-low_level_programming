@@ -25,5 +25,13 @@ n = get_bit(1, 1);
     printf("1,1 should give -1 %d\n", n);
 n = get_bit(0, 2);
     printf("0,2 should give -1 %d\n", n);
+n = get_bit(2, 1);
+    printf("2,1 should give 1 %d\n", n);
+n = get_bit(2, 2);
+    printf("2,2 should give -1 %d\n", n);
+n = get_bit(3, 1);
+    printf("3,1 should give 1  %d\n", n);
+n = get_bit(3, 2);
+    printf("3,2 should give -1 %d\n", n);
     return (0);
 }
