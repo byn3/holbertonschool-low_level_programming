@@ -19,8 +19,8 @@ int get_bit(unsigned long int n, unsigned int index)
 	int *array;
 	int store;
 
-	if (n == 0)
-		return (-1);
+	if (n == 0 && index == 0)
+		return (0);
 	while (temp > 0)
 	{
 		temp = temp >> 1;
