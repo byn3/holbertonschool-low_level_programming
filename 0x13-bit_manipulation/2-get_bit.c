@@ -14,30 +14,18 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int temp = n;
 	int count = 0;
-	unsigned int count2 = 0;
-	unsigned long int i;
-	int *array;
-	int store;
+	int i;
+	int array[1024];
 
+	if (index >= sizeof(n) * 8)
+		return (-1);
 	if (n == 0 && index == 0)
 		return (0);
-	if ((n == 0 || n == 1) && index > 0)
-		return (-1);
-	if ((n == 2 || n == 3) && index > 1)
-		return (-1);
-	if ((n >= 4 && n <= 7) && index > 2)
-		return (-1);
 	while (temp > 0)
 	{
 		temp = temp >> 1;
 		count++;
-		count2++;
 	}
-	array = malloc(sizeof(int) * count2);
-	if (!array)
-		return (-1);
-	if (index > count2)
-		return (-1);
 	for (count -= 1; count >= 0; count--)
 	{
 		i = n >> count;
@@ -46,7 +34,5 @@ int get_bit(unsigned long int n, unsigned int index)
 		else
 			array[count] = 0;
 	}
-	store = array[index];
-	free(array);
-	return (store);
+	return (array[index]);
 }
