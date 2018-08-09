@@ -18,12 +18,12 @@ int main(void)
     printf("%d\n", n);
 
 n = get_bit(0, 0);
-    printf("chould be 0 %d\n", n);
-n = get_bit(1, 0);
-    printf(" should be 1 %d\n", n);
+    printf("0,0 chould be 0 %d\n", n);
+n = get_bit(0, 1);
+    printf("0,1 should be -1 %d\n", n);
 n = get_bit(1, 1);
-    printf(" should give error or 0 %d\n", n);
+    printf("1,1 should give -1 %d\n", n);
 n = get_bit(0, 2);
-    printf("should give error or 0 %d\n", n);
+    printf("0,2 should give -1 %d\n", n);
     return (0);
 }
