@@ -22,7 +22,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		i++;
 	}
-	
+
 	for (count = 0; i >= 0; i--, count++)
 	{
 		sendback = 1;
@@ -34,4 +34,4 @@ unsigned int binary_to_uint(const char *b)
 		}
 	}
 	return (store);
-} 
+}
