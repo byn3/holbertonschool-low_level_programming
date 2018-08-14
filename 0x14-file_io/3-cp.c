@@ -65,14 +65,14 @@ void close_error100(int file)
 * @argv: string of the arguments
 * Return: 0 if works or exits if error
 */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int file;
-	int file2;
-	int reading;
-	int writing;
-	int closing;
-	char s[1024];
+	int file = -1;
+	int file2 = -1;
+	int reading = -1;
+	int writing = -1;
+	int closing = -1;
+	char s[1024] = {0};
 
 	argument_error97(argc);
 	file = open(argv[1], O_RDONLY);
