@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
 		writing = write(file2, s, reading);
 		if (writing == -1)
 			write_error99(argv[2]);
-	} while (reading > 0);
+	} while (reading >= 0);
 	closing = close(file);
 	if (closing == -1)
 		close_error100(file);
