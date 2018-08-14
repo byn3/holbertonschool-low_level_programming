@@ -2,7 +2,7 @@ At the end of this project you are expected to be able to explain to anyone, wit
 
 Look for the right source of information online
 How to create, open, close, read and write files
-creat(), open(), shutdown(), read(), write()
+creat(), open(), shutdown(), JK JK close() read(), write()
 
 What are file descriptors
 FD is an abstract indicator or a handle. used to access a file or other I/O resource. 
