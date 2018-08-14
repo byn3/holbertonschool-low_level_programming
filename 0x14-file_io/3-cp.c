@@ -63,6 +63,8 @@ void close_error100(int file)
 * main - copies content of a file to another file
 * @argc: number of args
 * @argv: string of the arguments
+*
+* Description : does still by calling the helper functions
 * Return: 0 if works or exits if error
 */
 int main(int argc, char **argv)
