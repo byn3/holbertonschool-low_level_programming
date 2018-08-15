@@ -87,9 +87,12 @@ int main(int argc, char **argv)
 		reading = read(file, s, 1024);
 		if (reading == -1)
 			read_error98(argv[1]);
-		writing = write(file2, s, reading);
-		if (writing == -1)
-			write_error99(argv[2]);
+		if (reading)
+		{
+			writing = write(file2, s, reading);
+			if (writing == -1)
+				write_error99(argv[2]);
+		}
 	} while (reading);
 	closing = close(file);
 	if (closing == -1)
