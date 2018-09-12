@@ -11,13 +11,10 @@ At the end of this project you are expected to be able to explain to anyone, wit
 WE CAN USE POINTERS AND DEREFERENCING AND ARROWS AND A WHOLE BUNCH WITH TYOPEDEF OH HAPPY HAPPY JOY JOY.*  
 
 
-
-
-
 ## Each scripts and their output  
-* Script 0 - Write a function that allocates memory using malloc.  
-* Script 1 - Write a function that concatenates two strings.  
-* Script 2 - Write a function that allocates memory for an array, using malloc.  
-* Script 3 - Write a function that creates an array of integers.  
-* Script 100 - Write a function that reallocates a memory block using malloc and free.  
-* Script 101 - Write a program that multiplies two positive numbers.
+* Script 0 - Define a new type struct dog with the following elements.  
+* Script 1 - Write a function that initialize a variable of type struct dog.  
+* Script 2 - Write a function that prints a struct dog.  
+* Script 3 - Define a new type dog_t as a new name for the type struct dog.  
+* Script 4 - Write a function that creates a new dog.    
+* Script 5 - Write a function that frees dogs.  
