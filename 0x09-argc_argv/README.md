@@ -17,7 +17,8 @@ void foo(int \_\_attribute\_\_((\_\_unused\_\_)) bar) {
     ...
 }
 
-*We can also use #pragma unused <variable>, so we have "int main(void \*ptr)" and that can also avoid warnings from compiler if some parameters are unused.*  
+*We can also use #pragma unused <variable>, so we have "int main(void \*ptr)" and that can also avoid warnings from compiler if some parameters are unused.*    
+    
 *WHY DO WE EVEN NEED TO DO THIS!?!? because when we use external APIs, then we might not use their parameter and we need to unused or void it. if we just used the parameter later like just writing ptr; this still throws warnings into the gcc so we need the void cast. it tells the compiler unambiguously and explicitly that the statement like ptr; will have no effect at all.*  
 
 ## Each scripts and their output  
