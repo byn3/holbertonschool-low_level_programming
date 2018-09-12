@@ -11,5 +11,11 @@ At the end of this project you are expected to be able to explain to anyone, wit
 **Why and how to use the const type qualifier?**  
 *use it so you get errors if you try and change a constant. it is helpful for security stuff and other reasons. variables can vary and change. but with constants it makes code more readable. using a constant helps because you can use it like a macro and it can save time and work. risky errors are avoided. It is useful for symbolic names for strings which will be useful for supporting multiple languages. also enumerations are helpful and safe.*  
 
-
 Extra info: to access the unnamed arguments, you need to first declare a variable of type va_list in the variadic function. the macro_va start is then called with two arguments, the first is the variable of type va_list and the second is the name of the last parameter of the function. after this step, each call of va_arg yields the next argument. first argument to va_arg is va_list and the second is the type of the next argument passed to the function. va_end must be called on the va_list before the function returns. 
+
+## Each scripts and their output  
+* Script 0 - Write a function that returns the sum of all its parameters.  
+* Script 1 - Write a function that prints numbers, followed by a new line.    
+* Script 2 - Write a function that prints strings, followed by a new line.  
+* Script 3 - Write a function that prints anything.  
+* Script 100 - Write a 64-bit program in assembly that prints Hello, Holberton, followed by a new line.   
