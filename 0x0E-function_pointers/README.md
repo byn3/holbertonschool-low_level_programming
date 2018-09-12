@@ -4,7 +4,7 @@ At the end of this project you are expected to be able to explain to anyone, wit
 
 **What are function pointers and how to use them?**  
 *A pointer is just a memory address. We can point to functions. If I had a function, "void fun(int a)" which printed the int, I could call it from the main like so with 2 lines:*  
-"void (\*fun_ptr)(int) = &fun;"
+"void (\*fun_ptr)(int) = &fun;"  
 *and the next line would be "(\*fun_ptr)(10);". The output would be 10. *   
 
 **What does a function pointer exactly hold?**  
