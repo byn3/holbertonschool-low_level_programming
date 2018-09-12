@@ -9,7 +9,7 @@ be default, when using automatic allocation, the program reserves space for vari
 
 **What is malloc and free and how to use them?**  
 *Malloc allocates size bytes and returns a pointer to the allocated memory and the memory is not initialized. Free is when allocated memory is not needed anymore. We need to give it back to the OS calling free.
-void free (void *ptr). the free will free up the memory space of ptr. ptr was previousky returned by malloc, calloc, or realloc. never trust malloc. sometimes it fails. on error malloc returns NULL. check its return value. need an if case if it is null and return an error. the memory pointer returned has read and write permissions. sizeof is best because different machines (good for portability).  malloc does not automatically release memory
+void free (void \*ptr). the free will free up the memory space of ptr. ptr was previousky returned by malloc, calloc, or realloc. never trust malloc. sometimes it fails. on error malloc returns NULL. check its return value. need an if case if it is null and return an error. the memory pointer returned has read and write permissions. sizeof is best because different machines (good for portability).  malloc does not automatically release memory
 The thing about free is you have to handle all the memory yourself. You need to track all the addresses inside a variable of type pointer. You need to deallocate all the memory space. If you dont then the program runs out of memory and the OS kills the program.*  
 
 **Why and when use malloc?**  
