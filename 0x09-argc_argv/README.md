@@ -27,5 +27,5 @@ void foo(int \_\_attribute\_\_((\_\_unused\_\_)) bar) {
 * Script 2 - Write a program that prints all arguments it receives.  
 * Script 3 - Write a program that multiplies two numbers.  
 * Script 4 - Write a program that adds positive numbers.  
-* Script 5 - Write a program that prints the minimum number of coins to make change for an amount of money.  
+* Script 100 - Write a program that prints the minimum number of coins to make change for an amount of money.  
 
