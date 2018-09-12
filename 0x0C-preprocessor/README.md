@@ -8,7 +8,7 @@ At the end of this project you are expected to be able to explain to anyone, wit
 **What are the most common predefined macros?**  
 *The most common are \_\_FILE\_\_ which expands to the name of the current input file in the form of a C string constant. This will be the path that the preprocessor used to open the file.* 
 *Next is \_\_LINE\_\_ which expands the current input line number in the form of a decimal int constant. These 2 macros are very useful for debugging and generating error messages. C99 introduces DATE, TIME, and other useful macros.* 
-*Plenty of other common ones exist like \_\_COUNTER\_\_, \_\_GFORTRAN\_\_, and theres actually a lot more just check out https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html *  
+*Plenty of other common ones exist like \_\_COUNTER\_\_, \_\_GFORTRAN\_\_, and theres actually a lot more just check out https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html*  
 
 **How to include guard your header files?**  
 *Use #ifndef FILENAME. then #define FILENAME after. This prevents duplicate loading and makes sure the given file is only included once. Prevents compile time headaches. If the #ifndef returns false, then the preprocessor skips down to the #endif which helps avoid second definitions.*  
