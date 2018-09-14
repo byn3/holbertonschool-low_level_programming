@@ -21,7 +21,7 @@ I wrote my own printf function with <a href="https://https://github.com/thenicop
 
 This project was created by <a href="https://github.com/iamzinzi">Jinzi Zhang</a> and I. It is a simple version of the sh shell. All the outputs and exit statuses should return the same as sh's. This project focused on memory, sys calls, and pointers to pointers. Like the project above, there were limitations
 
-## Description of Each Repo  
+## Description of Each Directory  
 ___  
 |           Directory           | Description
 |--------------------------------------------------|----------------------------------------------|
