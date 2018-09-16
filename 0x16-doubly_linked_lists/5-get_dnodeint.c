@@ -4,7 +4,7 @@
 /**
 * get_dnodeint_at_index - function that returns the nth node
 * @head: the head node given to us
-* @: index which number index we want
+* @index: index which number index we want
 *
 * Return: the node at the index . head is node 0
 */
