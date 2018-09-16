@@ -23,9 +23,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	temp = *h;
 	/* place it first index */
 	if (idx == 0)
-		return (add_nodeint(h, n));
+		return (add_dnodeint(h, n));
 	/* place it after the first */
-	while (count != idx)
+	while (count < idx - 1)
 	{
 		count++;
 		if (temp)
