@@ -44,7 +44,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(new);
 		return (0);
 	}
-	new->value = strdup(val);
+	new->value = strdup(value);
 	if (!(new->value))
 	{ /* error with duping val, free previous steps and exit */
 		free(new->key);
