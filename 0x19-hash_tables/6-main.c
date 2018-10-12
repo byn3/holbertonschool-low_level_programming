@@ -29,7 +29,7 @@ int main(void)
 	value[0] = '\0';
 	free(key);
 	free(value);
-	hash_table_set(ht, "98", "Battery Street"); 
+	hash_table_set(ht, "98", "Battery Street");
 	hash_table_set(ht, "hetairas", "Jennie");
 	hash_table_set(ht, "hetairas", "Jennie Z");
 	hash_table_set(ht, "mentioner", "Jennie");
