@@ -23,7 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	check = ht->array[index];
 	while (check)
 	{
-		if (!strcmp(key, check->value)) /* strcmp returns 0 if matches */
+		if (!strcmp(key, value)) /* strcmp returns 0 if matches */
 		{
 			free(check->value); /* get rid of old value, replace it */
 			check->value = strdup(value); /* str dup reallocs */
