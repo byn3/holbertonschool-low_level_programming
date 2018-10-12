@@ -9,8 +9,10 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *p;
+	hash_table_t *p = NULL;
 
+	if (!size)
+		return (NULL);
 	p = malloc(sizeof(hash_table_t)); /* malloc to store size&array */
 	if (!p)
 		return (NULL);
@@ -19,6 +21,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (!(p->array))
 		return (NULL);
 	while (size--)
-		p->array[size] = NULL;
+		p->array[size] = NULL; /* set all nodes to NULL */
 	return (p);
 }
