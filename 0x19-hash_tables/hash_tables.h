@@ -1,5 +1,6 @@
 #ifndef POTATO
 #define POTATO
+#define _GNU_SOURCE
 
 #include <stdio.h>
 #include <stdlib.h>

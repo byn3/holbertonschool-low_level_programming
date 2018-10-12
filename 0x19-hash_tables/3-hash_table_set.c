@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+#include <string.h>
 
 /**
 * hash_table_set - a function that adds an element to the hash table
