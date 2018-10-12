@@ -35,7 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	/* so there was no matching key, that means new key! */
-	new = malloc(sizeof(hash_node_t)); /* malloc a node */
+	new = calloc(sizeof(hash_node_t)); /* malloc a node */
 	if (!new) /* malloc error */
 		return (0);
 	new->key = strdup(key);
