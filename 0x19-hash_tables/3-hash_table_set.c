@@ -15,7 +15,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new = NULL;
 	hash_node_t *check = NULL;
 
-	if (!ht || !key || !(*key) || !strcmp(key, "" || !value))
+	if (!ht || !key || !(*key) || !strcmp(key, "") || !value)
 		return (0); /* if null hash table, key, or empty key, error */
 	index = key_index((unsigned char *)key, ht->size);
 	check = ht->array[index];
