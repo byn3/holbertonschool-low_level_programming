@@ -21,7 +21,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	check = ht->array[index];
 	while (check) /* check if the key already exists, if so replace. */
 	{
-		if (!strcmp(key, ht->key)) /* strcmp returns 0 if matches */
+		if (!strcmp(key, check->key)) /* strcmp returns 0 if matches */
 		{
 			free(check->value); /* get rid of old value, replace it */
 			check->value = strdup(value); /* str dup reallocs */
