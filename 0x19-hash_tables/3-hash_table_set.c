@@ -28,7 +28,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			free(check->value); /* get rid of old value, replace it */
 			check->value = strdup(value); /* str dup reallocs */
-			if (!check->value) /* if strdup returned an error */
+			if (!(check->value)) /* if strdup returned an error */
 				return (0);
 			return (1); /* exit cause we updated key's value */
 		}
