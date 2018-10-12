@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-#include <string.h>
 
 /**
 * hash_table_set - a function that adds an element to the hash table
@@ -16,9 +15,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new = NULL;
 	hash_node_t *check = NULL;
 
-	if (!ht || !key || !strcmp(key, ""))
+	if (!ht || !key || !strcmp(key, "") || !value)
 		return (0); /* if null hash table, key, or empty key, error */
-	index = key_index((const unsigned char *)key, ht->size);
+	index = key_index((unsigned char *)key, ht->size);
 
 	/* check if there a value associated with preexisting key, reassign val */
 	check = ht->array[index];
@@ -55,6 +54,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->next = NULL; /* everything was assigned with no probs */
 	if (ht->array[index]) /* if there is already a value in this key, */
 		new->next = ht->array[index]; /* make the new node be the first */
-	ht->array[index] = new;
+	ht->array[index] = new; /* could just take out the if honestly */
 	return (1);
 }
