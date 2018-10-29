@@ -1,7 +1,11 @@
 #include "sort.h"
 
 /**
+* selection_sort - uses a selection sort algo to sort an array
+* @array: an array of ints
+* @size: the size of the array
 *
+* Return: NONE it is voiderinoz
 */
 
 void selection_sort(int *array, size_t size)
