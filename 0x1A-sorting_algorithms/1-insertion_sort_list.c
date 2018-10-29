@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
-* insertion_sort_list - uses insertion sort
+* insertion_sort_list - uses insertion sort on a double linked list
 * @list: the list that is sorted. a linked list.
 *
 * Return: nothing it is void
