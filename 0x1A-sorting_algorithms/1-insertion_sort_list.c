@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
 
 /**
 * insertion_sort_list - uses insertion sort
@@ -24,12 +23,17 @@ void insertion_sort_list(listint_t **list)
 				holder = current->prev;
 				if (holder->n > current->n)
 				{
+					if (holder->prev)
 						(holder->prev)->next = current;
-						current->prev = holder->prev;
-						holder->next = current->next;
-						holder->prev = current;
-						current->next = holder;
+					current->prev = holder->prev;
+					holder->next = current->next;
+					holder->prev = current;
+					current->next = holder;
+					if (holder->next)
 						(holder->next)->prev = holder;
+					if (!current->prev)
+						*list = current;
+					print_list(*list);
 				}
 				else
 					current = current->next;
@@ -37,19 +41,3 @@ void insertion_sort_list(listint_t **list)
 			head = head->next;
 		}
 }
-
-			/*
-			\* just swap values. do not move any nodes. be super lazy. *\/
-				(holder->prev)->next = current;
-                current->prev = holder->prev;
-                holder->next = current->next;
-                holder->prev = current;
-                current->next = holder;
-                (holder->next)->prev = holder;
-
-                j--;
-                print_list(*list);
-                if (!current->next || (current->next)->next == NULL)
-                    break;
-		}
-		*/
