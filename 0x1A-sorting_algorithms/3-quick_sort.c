@@ -91,10 +91,10 @@ void quick_sort(int *array, size_t size)
 
 	if (!array || size < 2)
 		return;
-	
+
 	while (temp < size - 1)
 	{
-		if (array[temp] != array[temp+1])
+		if (array[temp] != array[temp + 1])
 			flag = 1;
 		temp++;
 	}
