@@ -14,7 +14,6 @@ void arraySwap(int *array1, int *array2)
 	temp = *array1;
 	*array1 = *array2;
 	*array2 = temp;
-
 }
 
 
@@ -33,19 +32,23 @@ int lomuto_partition(int *array, int lo, int hi, size_t size)
 	int i; /* first "pointer location" */
 	int j; /* second pointer location */
 
-	x = array[hi];
-	i = lo - 1;
+	x = array[hi]; /* the pivot, which is the last element */
+	i = lo - 1; /* i starts at -1 */
 
 	for (j = lo; j < hi; j++)
-	{
-		if (array[j] <= x)
-		{
-			i = i + 1;
+	{ /* for the length of the whole array, */
+		if (array[j] < x)
+		{ /* if the pivot is bigger than current element */
+			i += 1; /* move up i, swap i and j */
 			arraySwap(&array[i], &array[j]);
-			print_array(array, size);
+
+			if (i != j) /* if i is not j then print array */
+				print_array(array, size);
 		}
 	}
 	arraySwap(&array[i + 1], &array[hi]);
+	if (i + 1 != j) /* print if we are not equal */
+		print_array(array, size);
 	return (i + 1);
 }
 
@@ -65,7 +68,7 @@ void quickie(int *array, int lo, int hi, size_t size)
 	int i;
 
 	if (lo < hi)
-	{
+	{ /* partitions and then recursively calls on itself */
 		i = lomuto_partition(array, lo, hi, size);
 		quickie(array, lo, i - 1, size);
 		quickie(array, i + 1, hi, size);
@@ -83,6 +86,6 @@ void quickie(int *array, int lo, int hi, size_t size)
 
 void quick_sort(int *array, size_t size)
 {
-	quickie(array, 0, size - 1, size);
+	quickie(array, 0, size - 1, size); /* call on my algo */
 	/* arraySwap(&array[0], &array[1]); this works. just checking */
 }
