@@ -91,7 +91,7 @@ void quick_sort(int *array, size_t size)
 	while (--size)
 		if (array[size] == array[size - 1])
 			continue;
-	if (size)
+	if (!size)
 		return;
 	quickie(array, 0, size - 1, size); /* call on my algo */
 	/* arraySwap(&array[0], &array[1]); this works. just checking */
