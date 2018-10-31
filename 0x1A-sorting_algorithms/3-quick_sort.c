@@ -87,7 +87,10 @@ void quickie(int *array, int lo, int hi, size_t size)
 void quick_sort(int *array, size_t size)
 {
 	if (size < 2)
+	{
+		print_array(array, size);
 		return;
+	}
 	quickie(array, 0, size - 1, size); /* call on my algo */
 	/* arraySwap(&array[0], &array[1]); this works. just checking */
 }
