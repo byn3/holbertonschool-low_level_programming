@@ -42,6 +42,7 @@ void heap_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 int less(int a, int b);
 void exchange(int *array, int a, int b);
+int hoare_partition(int *array, int lo, int hi, size_t size);
 
 
 #endif
