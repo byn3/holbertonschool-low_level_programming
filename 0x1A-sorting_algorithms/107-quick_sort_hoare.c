@@ -14,11 +14,12 @@ void arraySwap(int *array1, int *array2)
 	temp = *array1;
 	*array1 = *array2;
 	*array2 = temp;
+
 }
 
 
 /**
-* lomuto_partition - a partition type. takes in an array and 2 positions
+* hoare_partition - a partition type. takes in an array and 2 positions
 * @array: the array we want to split into 2
 * @lo: the lower position pointer location
 * @hi: the higher position pointer location
@@ -26,30 +27,38 @@ void arraySwap(int *array1, int *array2)
 *
 * Return: the i + 1 position
 */
-int lomuto_partition(int *array, int lo, int hi, size_t size)
+int hoare_partition(int *array, int lo, int hi, size_t size)
 {
-	int x; /* holds last array value */
+	int pivot; /* holds last array value */
 	int i; /* first "pointer location" */
 	int j; /* second pointer location */
 
-	x = array[hi]; /* the pivot, which is the last element */
+	pivot = array[hi]; /* the pivot, which is the last element */
 	i = lo - 1; /* i starts at -1 */
+	j = hi + 1;
 
-	for (j = lo; j < hi; j++)
-	{ /* for the length of the whole array, */
-		if (array[j] < x)
-		{ /* if the pivot is bigger than current element */
-			i += 1; /* move up i, swap i and j */
+	while (1)
+	{
+		do {
+			i++;
+		} while (array[i] < pivot);
+
+		do {
+			j--;
+		} while (array[j] > pivot);
+
+		if (i < j)
+		{
 			arraySwap(&array[i], &array[j]);
-
-			if (i != j) /* if i is not j then print array */
-				print_array(array, size);
+			print_array(array, size);
+		}
+		else
+		{
+			if (i == j)
+				return (j - 1);
+			return (j);
 		}
 	}
-	arraySwap(&array[i + 1], &array[hi]);
-	if (i + 1 != j) /* print if we are not equal */
-		print_array(array, size);
-	return (i + 1);
 }
 
 
@@ -65,14 +74,15 @@ int lomuto_partition(int *array, int lo, int hi, size_t size)
 
 void quickie(int *array, int lo, int hi, size_t size)
 {
-	int i;
+	int pivot;
 
-	if (lo < hi)
-	{ /* partitions and then recursively calls on itself */
-		i = lomuto_partition(array, lo, hi, size);
-		quickie(array, lo, i - 1, size);
-		quickie(array, i + 1, hi, size);
-	}
+	if (lo >= hi)
+		return;
+	/* partitions and then recursively calls on itself */
+	pivot = hoare_partition(array, lo, hi, size);
+	quickie(array, lo, pivot, size);
+	quickie(array, pivot + 1, hi, size);
+
 }
 
 
@@ -92,7 +102,7 @@ void quick_sort_hoare(int *array, size_t size)
 	if (!array || size < 2)
 		return;
 
-	while (temp < size - 1)
+	while (temp < size - 1 && flag == 0)
 	{
 		if (array[temp] != array[temp + 1])
 			flag = 1;
