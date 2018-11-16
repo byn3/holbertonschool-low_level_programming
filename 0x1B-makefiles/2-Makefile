@@ -1,5 +1,5 @@
 CC= gcc
-SRC= holberton.c main.c # I wanted to use wildcard *.c
+SRC= main.c holberton.c # I wanted to use wildcard *.c
 OBJ= $(SRC:.c=.o)
 NAME= holberton
 
