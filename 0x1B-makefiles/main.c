@@ -12,4 +12,3 @@ int main(void)
 }
 /* Holberton */
 /* Holberton */
-/* Holberton */
