@@ -3,7 +3,10 @@
 
 
 def island_perimeter(grid):
-    """ do some funky magic """
+    """ do some funky magic
+    WTF WHY DOESNT THIS WORK?!?!
+    UGHHHHHH
+    """
 
     count = 0
     # length = len(grid)
