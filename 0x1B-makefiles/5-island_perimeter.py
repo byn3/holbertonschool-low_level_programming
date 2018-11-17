@@ -5,9 +5,6 @@
 def island_perimeter(grid):
     """ do some funky magic """
 
-    if grid is None or len(grid) is 0:
-        return 0
-
     count = 0
     # length = len(grid)
     # length2 = len(grid[0])
