@@ -2,7 +2,7 @@
 
 /**
 * binary_tree_delete - frees an entire tree
-* @parent: a pointer to the parent
+* @tree: a pointer to the parent
 *
 * Return: None it is voiderino
 */
