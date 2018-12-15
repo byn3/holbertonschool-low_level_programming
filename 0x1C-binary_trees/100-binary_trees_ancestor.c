@@ -1,7 +1,11 @@
 #include "binary_trees.h"
 
 /**
+* binary_tree_ancester - finds if 2 nodes share a ancestor
+* @first: the first node given
+* @second: the second node given
 *
+* Return: A pointer to the ancestor node
 */
 
 binary_tree_t *binary_trees_ancestor(
