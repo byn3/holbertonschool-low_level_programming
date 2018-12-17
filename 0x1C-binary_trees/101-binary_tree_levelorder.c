@@ -27,6 +27,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 * printLevel - prints the tree and recursess down to that level
 * @tree: a tree node given
 * @d: the level we want
+* @func: the function poiniter
 *
 * Return: Returns nothing it is void
 */
