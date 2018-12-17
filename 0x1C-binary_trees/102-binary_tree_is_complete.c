@@ -28,17 +28,17 @@ int isComplete(const binary_tree_t *tree,
 				unsigned int nodes)
 {
 	/* An empty tree is complete */
-	if (root == NULL)
-		return (0);
+	if (tree == NULL)
+		return (1);
 
 	/* If index assigned to current node is more than */
 	/* number of nodes in tree, then tree is not complete */
 	if (index >= nodes)
-		return (1);
+		return (0);
 
 	/* Recursion for left and right subtrees */
-	return (isComplete(root->left, 2 * index + 1, nodes) &
-			isComplete(root->right, 2 * index + 2, nodes));
+	return (isComplete(tree->left, 2 * index + 1, nodes) &
+			isComplete(tree->right, 2 * index + 2, nodes));
 }
 
 /**
