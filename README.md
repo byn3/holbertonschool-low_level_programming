@@ -47,6 +47,7 @@ ___
 | `0x14-file_io` | File input and output descriptors, system calls, permissions |
 | `0x16-doubly_linked_lists` | Doubly linked lists and manipulation of them |
 | `0x17-dynamic_libraries` | Understanding dynamic libraries and a blog post on Linkedin |
+| `0x18-stacks_queues_lifo_fifo` | Used submodules and worked with stacks and queues |
 ___  
 
 ### Technologies Used
