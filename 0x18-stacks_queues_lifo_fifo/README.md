@@ -1,6 +1,5 @@
 
-ALL code and content is written in my monty repo. I am practicing using
-submodules for this project.
+ALL code and content is written in my monty repo (link above or click here https://github.com/byn3/monty/tree/master). I am practicing using submodules for this project.
 
 
 # What I learned from this project  
@@ -39,15 +38,21 @@ BFS with queues. Find all possible paths then enqueue them into a queue. *
 
 ## Each scripts and their output  
 * Script 0 - Implement the push and pall opcodes.  
-* Script 1 - Write a function that returns the number of elements in a linked dlistint_t list.  
-* Script 2 - Write a function that adds a new node at the beginning of a dlistint_t list.  
-* Script 3 - Write a function that adds a new node at the end of a dlistint_t list.  
-* Script 4 - Write a function that free a dlistint_t list.  
-* Script 5 - Write a function that returns the nth node of a dlistint_t linked list.  
-* Script 6 - Write a function that returns the sum of all the data (n) of a dlistint_t linked list.  
-* Script 7 - Write a function that inserts a new node at a given position.  
-* Script 8 - Write a function that deletes the node at index index of a dlistint_t linked list.  
-* Script 102 - Find the largest palindrome made from the product of two 3-digit numbers.  
+* Script 1 - Implement the pint opcode.  
+* Script 2 - Implement the pop opcode.  
+* Script 3 - Implement the swap opcode.  
+* Script 4 - Implement the add opcode.  
+* Script 5 - Implement the nop opcode.  
+* Script 6 - Implement the sub opcode.  
+* Script 7 - Implement the div opcode.  
+* Script 8 - Implement the mul opcode.  
+* Script 9 - Implement the mod opcode.  
+* Script 10 - Implement comment.  
+* Script 11 - Implement the pchar opcode.   
+* Script 12 - Implement the pstr opcode.    
+* Script 13 - Implement the rotl opcode.   
+* Script 14 - Implement the rotr opcode.     
+* Script 15 - Implement the stack and queue opcodes.    
 
 
 
