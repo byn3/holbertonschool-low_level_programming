@@ -46,6 +46,7 @@ ___
 | `0x13-bit_manipulation` | Bitwise manipulation scripts and functions |
 | `0x14-file_io` | File input and output descriptors, system calls, permissions |
 | `0x16-doubly_linked_lists` | Doubly linked lists and manipulation of them |
+| `0x17-dynamic_libraries` | Understanding dynamic libraries and a blog post on Linkedin |
 ___  
 
 ### Technologies Used
