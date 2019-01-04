@@ -49,6 +49,7 @@ ___
 | `0x17-dynamic_libraries` | Understanding dynamic libraries and a blog post on Linkedin |
 | `0x18-stacks_queues_lifo_fifo` | Used submodules and worked with stacks and queues |
 | `0x19-hash_tables` | Hash tables and functions |
+| `0x1A-sorting_algorithms` | Practiced sorting algorithms and their edge cases with BigO |
 
 ___  
 
