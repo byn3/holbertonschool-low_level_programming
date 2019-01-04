@@ -1,7 +1,3 @@
-
-ALL code and content is written in my monty repo (link above or click here https://github.com/byn3/monty/tree/master). I am practicing using submodules for this project.
-
-
 # What I learned from this project  
 At the end of this project you are expected to be able to explain to anyone, without the help of Google:  
 ---   
@@ -68,21 +64,12 @@ data representation.*
 
 
 ## Each scripts and their output  
-* Script 0 - Implement the push and pall opcodes.  
-* Script 1 - Implement the pint opcode.  
-* Script 2 - Implement the pop opcode.  
-* Script 3 - Implement the swap opcode.  
-* Script 4 - Implement the add opcode.  
-* Script 5 - Implement the nop opcode.  
-* Script 6 - Implement the sub opcode.  
-* Script 7 - Implement the div opcode.  
-* Script 8 - Implement the mul opcode.  
-* Script 9 - Implement the mod opcode.  
-* Script 10 - Implement comment.  
-* Script 11 - Implement the pchar opcode.   
-* Script 12 - Implement the pstr opcode.    
-* Script 13 - Implement the rotl opcode.   
-* Script 14 - Implement the rotr opcode.     
-* Script 15 - Implement the stack and queue opcodes.    
+* Script 0 - Write a function that creates a hash table.  
+* Script 1 - Write a hash function implementing the djb2 algorithm.  
+* Script 2 - Write a function that gives you the index of a key.  
+* Script 3 - Write a function that adds an element to the hash table.  
+* Script 4 - Write a function that retrieves a value associated with a key.  
+* Script 5 - Write a function that prints a hash table.  
+* Script 6 - Write a function that deletes a hash table.  
 
 
