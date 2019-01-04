@@ -14,20 +14,20 @@ cryptography.*
 
 
 **What is a hash function?**  
-*4 main characteristics:
-1) The hash value is fully determined by the data being
+*4 main characteristics:*  
+*1) The hash value is fully determined by the data being
 hashed. If something else besides the input is used to make the hash, the hash
 value is not completely dependent on the input and allows for worse
-distribution of the values.
-2) The hash functions uses all the input data. If the hash function does not
+distribution of the values.*  
+*2) The hash functions uses all the input data. If the hash function does not
 use all the input data, then slight variations to the input data can cause
-hella collisions. 
-3) The hash function uniformly distributes data across all possible hash
+hella collisions.*   
+*3) The hash function uniformly distributes data across all possible hash
 values. If the hash does not distribute uniformly, a large number of collisions
-will occur and that cuts down on efficiently. 
-4) The hash function generates very different hash values for similar strings.
+will occur and that cuts down on efficiently.*   
+*4) The hash function generates very different hash values for similar strings.
 In reality, many data sets have similar data elements and we want theses to be
-distributed over a table. *  
+distributed over a table.*    
 
 
 **What is a hash table, how do they work and how to use them?**  
