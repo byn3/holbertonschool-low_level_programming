@@ -4,15 +4,15 @@ At the end of this project you are expected to be able to explain to anyone, wit
 ---   
 
 **What are make, Makefiles?**  
-*Ing.*  
+*A Unix tool that simplifies building programs when they are composed from many files, or building many programs simultaneously. It is able to determine when source files have changed and rebuild only those components needed for an update.*  
 
 
 **When, why and how to use Makefiles?**  
-*htt/.*  
+*A makefile is used with the UNIX make utility to determine which portions of a program to compile. A makefile is basically a script that guides the make utility to choose the appropriate program files that are to be compiled and linked together.*  
 
 
 **What are explicit and implicit rules?**  
-*hc.*  
+*A file "can be made" if it is mentioned explicitly in the makefile as a target or a prerequisite, or if an implicit rule can be recursively found for how to make it. When an implicit prerequisite is the result of another implicit rule, we say that chaining is occurring.*  
 
 
 **What are the most common / useful rules?**  
