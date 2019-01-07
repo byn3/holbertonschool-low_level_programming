@@ -51,6 +51,7 @@ ___
 | `0x19-hash_tables` | Hash tables and functions |
 | `0x1A-sorting_algorithms` | Practiced sorting algorithms and Big O |
 | `0x1B-makefiles` | Project used to understand Makefiles and their primary uses |
+| `0x1C-binary_trees` | Learned binary trees and concepts |
 
 ___  
 
