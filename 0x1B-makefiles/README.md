@@ -16,11 +16,11 @@ At the end of this project you are expected to be able to explain to anyone, wit
 
 
 **What are the most common / useful rules?**  
-*Ick.*  
+*https://www.gnu.org/software/make/manual/html_node/Rules.html.*  
 
 
 **What are variables and how to set and use them?**  
-*Ick.*  
+*https://ftp.gnu.org/old-gnu/Manuals/make-3.79.1/html_chapter/make_6.html.*  
 
 
 ## Each scripts and their output  
