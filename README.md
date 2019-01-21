@@ -41,9 +41,11 @@ ___
 | `0x0D-structures_typedef` | Project that introcuded me to C structures and freeing all their attributes |
 | `0x0E-function_pointers` | Projects that go over manipulating pointers, derefrencing, and memory addresses |
 | `0x0F-variadic_functions` | Infinite possible arguments... va_stuff projects |
+| `0x10-holberton_printf` | Project 10 was the capstone printf project |
 | `0x11-singly_linked_lists` | Linked list versus arrays. Building and using linked lists |
 | `0x12-more_singly_linked_lists` | Higher difficulty projects that dealt with strutures and singly linked lists |
 | `0x13-bit_manipulation` | Bitwise manipulation scripts and functions |
+| `0x15-holberton_shell` | Project 15 was the capstone shell project |
 | `0x14-file_io` | File input and output descriptors, system calls, permissions |
 | `0x16-doubly_linked_lists` | Doubly linked lists and manipulation of them |
 | `0x17-dynamic_libraries` | Understanding dynamic libraries and a blog post on Linkedin |
