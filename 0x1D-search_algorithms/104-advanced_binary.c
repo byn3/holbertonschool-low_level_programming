@@ -32,7 +32,8 @@ int binary_search_helper(int *array, size_t left, size_t right, int value)
 	{
 		if (array[left] == value)
 			return (left);
-		return (right);
+		if (array[right] == value)
+			return (right);
 	}
 	/* check if middle is value, if so go left*/
 	/* if the value is on the left, search left */
