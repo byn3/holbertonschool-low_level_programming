@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
-* binary_search_helper - searches for a value in an array of ints
+* binary_search_helper - searches  a value in an array of ints
 * @array: an array we are given
 * @left: the left boundary of the array
 * @right: the left boundary of the array
@@ -43,7 +43,7 @@ int binary_search_helper(int *array, size_t left, size_t right, int value)
 }
 
 /**
-* binary_search - searches for a value in an array of ints
+* binary_search - searches  a value in an array of ints
 * @array: an array we are given
 * @size: a size of the array
 * @value: the numebr we are searching
