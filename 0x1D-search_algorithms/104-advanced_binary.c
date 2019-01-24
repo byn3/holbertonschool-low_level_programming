@@ -44,7 +44,7 @@ int binary_search_helper(int *array, size_t left, size_t right, int value)
 }
 
 /**
-* binary_search - searches  a value in an array of ints
+* advanced_binary - searches  a value in an array of ints
 * @array: an array we are given
 * @size: a size of the array
 * @value: the numebr we are searching
