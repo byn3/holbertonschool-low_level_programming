@@ -54,6 +54,7 @@ ___
 | `0x1A-sorting_algorithms` | Practiced sorting algorithms and Big O |
 | `0x1B-makefiles` | Project used to understand Makefiles and their primary uses |
 | `0x1C-binary_trees` | Learned binary trees and concepts |
+| `0x1D-search_algorithms` | Review search algorithms and big O |
 
 ___  
 
